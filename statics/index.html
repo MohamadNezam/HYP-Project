@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test Server</title>
+    </head>
+    <body>
+        <h1>
+            This is a test for the server
+        </h1>
+        <ul>
+
+        </ul>
+    </body>
+</html>
+<script>
+    var myList = document.querySelector('ul');
+    fetch('v1/managers').then(function(response) {
+        return response.json();
+    }).then(function(json) {
+        for(var i = 0; i < json.length; i++) {
+            var listItem = document.createElement('li');
+            let {id_person, name, surename, email, description, photo, phone, role} = json[i];
+            listItem.innerHTML = `${id_person} - ${name} - ${surename} - ${email} - ${description} - ${photo} - ${phone} - ${role}`;
+            myList.appendChild(listItem);
+        }
+    });
+</script>
