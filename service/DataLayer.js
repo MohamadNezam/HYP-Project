@@ -14,10 +14,10 @@ let sqlDb = sqlDbFactory({
     client: 'pg',
     debug: true,
     connection: {
-        host : 'localhost',
-        user : 'postgres',
-        password : '1234',
-        database : 'voluntary'
+        host : 'ec2-54-86-170-8.compute-1.amazonaws.com',
+        user : 'shezoqaidfazvh',
+        password : '6867a1e060f9b797af32b7b665cb98956f04a95c06498a1de943dd6d133ccf28',
+        database : 'd2jl4rd7deie9n'
       }
     //connection: process.env.DATABASE_URL,
     //ssl: true
