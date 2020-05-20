@@ -10,7 +10,7 @@ var jsyaml = require('js-yaml');
 var serverPort = 8080;
 
 let serveStatic = require('serve-static');
-//let { setupDataLayer } = require('./service/DataLayer');
+let { setupDataLayer } = require('./service/DataLayer');
 
 // swaggerRouter configuration
 var options = {
