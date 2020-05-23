@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>home page</title>
+    <link rel="stylesheet" type="text/css" href="css/registration.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+ <link rel="stylesheet" type="text/css" href="css/footer.css">
+</head>
+
+<body>
+    
+    
+                <!--   ================================================== -->
+          <!--   ================== HEADER =========================== -->
+        
+<nav class="navbar navbar-expand-md  navbar-dark fixed-top" style="background-color: #3fdaa1;">
+    <a href="#" class="navbar-brand">
+        <img src="img/logo.png" height="35" alt="logo">
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav">
+            <a href="home.html" class="nav-item nav-link ">HOME</a>
+            <a href="contact.html" class="nav-item nav-link">CONTACTS</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">SERVICES</a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">SERVICE 1</a>
+                    <a href="#" class="dropdown-item">SERVICE 2</a>
+                    <a href="#" class="dropdown-item">SERVICE 3</a>
+                </div>
+            </div>
+             <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">EVENTS</a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">EVENT 1</a>
+                    <a href="#" class="dropdown-item">EVENT 2</a>
+                    <a href="#" class="dropdown-item">EVENT 3</a>
+                </div>
+            </div>
+             <a href="persons.html" class="nav-item nav-link">PERSONS</a>
+        </div>
+        
+        <div class="navbar-nav">
+            <a href="terms.html" class="btn btn-outline-light active">Register</a>
+        </div>
+    </div>
+</nav>
+
+      <br>   <br>  <br> 
+      
+       <!--   ================================================== -->
+    
+	<div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                       <img src="img/register.png" class="reg" alt=""/>
+                        <h3>Registration.</h3>
+                        
+                    </div>
+                    <div class="col-md-9 register-right">
+                        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Participant</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Volunteer</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Apply as a Participant</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Full name *" value="" />
+                                        </div>
+                                         <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Email *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="country" class="form-control" placeholder="country *" value="" />
+                                        </div>
+                                      
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="tax code" class="form-control" placeholder="Tax code *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Phone Number *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                        <input type="submit" class="btnRegister"  value="Register"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <h3  class="register-heading">Apply as a Volunteer</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Full Name *" value="" />
+                                        </div>
+                                         <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Email Address*" value="" />
+                                        </div>
+                                        <div class="dropdown">
+                                          <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Country *" value="" />
+                                        </div>
+										  
+										</div>
+
+                                        <div >
+										  <input type="checkbox" name="vehicle1" value="Bike">
+										  <label for="vehicle1"> I declare that all the information are true. </label>
+										</div>
+										
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <table>
+										  <tr>
+											<td>Identity Card</td>
+											 <td><input type="file" id="IdentitFile" ></td> 
+										  </tr>
+										  <tr>
+											<td>Passport</td>
+											 <td><input type="file" id="PassportFile" ></td> 
+										  </tr>
+										  <tr>
+											<td>Visa</td>
+											 <td><input type="file" id="VisaFile" ></td>  
+										  </tr>
+										  <tr>
+											<td>3*4 Picture</td>
+											  <td><input type="file" id="PictureFile" ></td> 
+										  </tr>
+										    <tr>
+											<td>Permeso</td>
+											 <td><input type="file" id="PermesoFile" ></td>  
+										  </tr>
+										    <tr>
+											<td>Insurance card</td>
+											 <td><input type="file" id="InsuranceFile" ></td>  
+											
+										  </tr>
+										</table>
+                                   
+                                   		<div class="form-group">
+                                        <input type="submit" class="btnRegister"  value="Register"/>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          </div>	
+    
+    
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
