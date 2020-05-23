@@ -34,7 +34,7 @@ exports.eventsGET = function(limit,offset,date,manager,service) {
   var query = query.join('events', 'activities.id_activity', 'events.id_activity');
   var query = query.select(
     'activities.id_activity', 'activities.location', 'activities.title', 'activities.description', 
-    'activities.start_time', 'activities.end_time', 'events.event_date', 'events.id_manager', 
+    'activities.start_time', 'activities.end_time', 'activities.image', 'events.event_date', 'events.id_manager', 
     'events.id_service');
 
   if(date) query = query.where('event_date', date);
