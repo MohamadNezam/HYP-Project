@@ -14,7 +14,7 @@
 </html>
 <script>
     var myList = document.querySelector('ul');
-    fetch('v1/managers').then(function(response) {
+    fetch('managers').then(function(response) {
         return response.json();
     }).then(function(json) {
         for(var i = 0; i < json.length; i++) {
