@@ -69,7 +69,7 @@ exports.eventsMonthGET = function(limit,offset) {
   var query = query.join('events', 'activities.id_activity', 'events.id_activity');
   var query = query.select(
     'activities.id_activity', 'activities.location', 'activities.title', 'activities.description', 
-    'activities.start_time', 'activities.end_time', 'events.event_date', 'events.id_manager', 
+    'activities.start_time', 'activities.end_time', 'activities.image', 'events.event_date', 'events.id_manager', 
     'events.id_service');
   var query = query.andWhereRaw(`EXTRACT(MONTH FROM events.event_date::date) = ?`, [month]);
 
@@ -94,7 +94,7 @@ exports.eventsEventIdGET = function(eventId) {
   var query = query.join('events', 'activities.id_activity', 'events.id_activity');
   var query = query.select(
     'activities.id_activity', 'activities.location', 'activities.title', 'activities.description', 
-    'activities.start_time', 'activities.end_time', 'events.event_date', 'events.id_manager', 
+    'activities.start_time', 'activities.end_time', 'activities.image', 'events.event_date', 'events.id_manager', 
     'events.id_service');
   var query = query.where('events.id_activity', eventId);
 
