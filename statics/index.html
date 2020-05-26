@@ -340,8 +340,8 @@ And the below chart shows that our charity spread all around the world</p>
       
       
       <script>
-     //var myList = document.querySelector('ul');
-    fetch('https://cors-anywhere.herokuapp.com/https://hyp-project.herokuapp.com/api/events').then(function(response) {
+   
+    fetch('https://hyp-project.herokuapp.com/api/events').then(function(response) {
         return response.json();
     }).then(function(json) {
             
@@ -358,63 +358,7 @@ And the below chart shows that our charity spread all around the world</p>
         }
     }); 
           
-          
-          
-          
-          
-          /*
-          document.getElementsByClassName("carousel-inner").innerHTML= '<div class="carousel-item">'+
-                                        '<div class="col-md-4">'+
-                                            '<div class="card card-body">'+
-                                                '<img class="img-fluid" src="http://placehold.it/380?text=2">'+
-                                            '</div>'+
-                                            '<div class"eventName">'+
-                                                '<a href="#" >' + hi + '</a>'+
-                                            '</div> '+
-                                        '</div>'+
-                    
-                                    '</div>';
-
-          $("#EventsCard").appendChild(
-                                      '<div class="carousel-item">'+
-                                        '<div class="col-md-4">'+
-                                            '<div class="card card-body">'+
-                                                '<img class="img-fluid" src="http://placehold.it/380?text=2">'+
-                                            '</div>'+
-                                            '<div class"eventName">'+
-                                                '<a href="#" >   hi  </a>'+
-                                            '</div> '+
-                                        '</div>'+
-                    
-                                    '</div>');
-          
-          var carouselitem = document.createElement("div");
-          carouselitem.className="carousel-item";
-          
-          var colmd4 = document.createElement("div");
-          colmd4.className="col-md-4";
-          
-          
-          var cardbody = document.createElement("div");
-          cardbody.className="card card-body";
-          
-          var cardimg = document.createElement("img");
-           cardimg.setAttribute("src", "http://placehold.it/380?text=2");
-           cardimg.className="img-fluid";
-          
-          
-          
-          cardbody.append(cardimg);
-          colmd4.append(cardbody);
-          carouselitem.append(colmd4);
-          document.getElementById("EventsCard").append(carouselitem); 
-         
-          */
-          
-          
-   
- 
-  
-</script>
+          </script>
+       
   </body>
 </html>
