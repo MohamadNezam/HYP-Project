@@ -131,9 +131,35 @@
     
     <script>
         
-        
-
+        var xhReq = new XMLHttpRequest();
+	xhReq.open("GET", 'https://hyp-project.herokuapp.com/api/volunteers', false);
+	xhReq.send(null);
+	var jsonObject = JSON.parse(xhReq.responseText);
+		 
+          for(var i = 0; i < jsonObject.length; i++) {
+           
+            var s = i+1;
+            let {id_person, name, surename, email, description, photo, volunteer_time} = jsonObject[i];
+          
+              $('#testimonial-carousel').append($(''+
+                                            '<div class="testimonial-block">'+
+                                                '<div class="inner-box">'+
+                                                    '<div class="text"> '+description+' </div>'+
+                                                    '<div class="info-box">'+
+                                                        '<div class="thumb"><img src="'+photo+'" alt=""></div>'+
+                                                        '<h4 class="name">'+name+' '+surename+'</h4>'+
+                                                        '<span class="designation">'+email+'</span>'+
+                                                    '</div>'+
+                                                '</div>'+
+                                            '</div>'+
+            ''));  
+            
+            
        
+          
+         } 
+
+       /*
        await fetch('https://hyp-project.herokuapp.com/api/volunteers').then(function(response) {
         return response.json();
     }).then(function(json) {
@@ -161,7 +187,7 @@
     }); 
     
             
-       
+       */
        
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.js"></script>
