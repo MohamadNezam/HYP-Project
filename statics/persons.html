@@ -43,7 +43,7 @@
 			</div>
 
 			<div id="testimonial-carousel" class="testimonial-carousel owl-carousel owl-theme">
-			 	<div class="testimonial-block">
+			<!-- 	<div class="testimonial-block">
 					<div class="inner-box">
 						<div class="text">test</div>
 						<div class="info-box">
@@ -53,7 +53,7 @@
 						</div>
 					</div>
 				</div>
-<!--
+
 				<div class="testimonial-block">
 					<div class="inner-box">
 						<div class="text">Clara Barton supported VOLUNTEERARO from the 1990s. In the latter part of her life, she retired from acting to devote more time to UNICEF projects in Africa and other countries. “The ‘Third World’ is a term I don’t like very much because we’re all one world.”</div>
@@ -134,7 +134,7 @@
         
 
        
-        fetch('https://hyp-project.herokuapp.com/api/volunteers').then(function(response) {
+       await fetch('https://hyp-project.herokuapp.com/api/volunteers').then(function(response) {
         return response.json();
     }).then(function(json) {
             
