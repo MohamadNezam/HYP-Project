@@ -149,7 +149,7 @@
         //getData(url);
         
        
-        fetch('https://cors-anywhere.herokuapp.com/https://hyp-project.herokuapp.com/api/volunteers').then(function(response) {
+        fetch('https://hyp-project.herokuapp.com/api/volunteers').then(function(response) {
         return response.json();
     }).then(function(json) {
             
@@ -157,20 +157,15 @@
            
             var s = i+1;
             let {id_person, name, surename, email, description, photo, volunteer_time} = json[i];
-           alert(description);
-            //document.getElementById('latestEventHeader'+s).innerText = title;       
-            //document.getElementById('latestEventImage'+s).src=image;
-            //document.getElementById('latestEventText'+s).innerText=description;
-            //document.getElementById('latestEventUrl'+s).href='https://hyp-project.herokuapp.com/api/events/'+id_activity;
-            
+
              $('#testimonial-carousel').append($(''+
                                             '<div class="testimonial-block">'+
                                                 '<div class="inner-box">'+
-                                                    '<div class="text"> dddddddddddddd </div>'+
+                                                    '<div class="text"> '+description+' </div>'+
                                                     '<div class="info-box">'+
-                                                        '<div class="thumb"><img src="img/02.jpg" alt=""></div>'+
-                                                        '<h4 class="name">Eva Peron</h4>'+
-                                                        '<span class="designation">Ui Designer & CEO</span>'+
+                                                        '<div class="thumb"><img src='photo' alt=""></div>'+
+                                                        '<h4 class="name">'+name surename+'</h4>'+
+                                                        '<span class="designation">'+email+'</span>'+
                                                     '</div>'+
                                                 '</div>'+
                                             '</div>'+
