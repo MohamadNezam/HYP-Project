@@ -132,24 +132,9 @@
     <script>
         
         
-     // const fetch = require("node-fetch");
 
-        const url = "https://cors-anywhere.herokuapp.com/https://hyp-project.herokuapp.com/api/volunteers";
-
-        const get_data = async url => {
-          try {
-            const response = await fetch(url);
-            const json = await response.json();
-            console.log(json);
-          } catch (error) {
-            console.log(error);
-          }
-        };
-
-        //getData(url);
-        
        
-        fetch('https://cors-anywhere.herokuapp.com/https://hyp-project.herokuapp.com/api/volunteers').then(function(response) {
+        fetch('https://hyp-project.herokuapp.com/api/volunteers').then(function(response) {
         return response.json();
     }).then(function(json) {
             
