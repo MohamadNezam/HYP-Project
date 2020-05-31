@@ -449,29 +449,7 @@ paths:
           description: "Service not found"
       x-swagger-router-controller: "Service"
       
-    /services/category/{serviceCategoryId}:
-    get:
-      summary: Find a service by Category
-      tags:
-        - Service
-      description: Returns a service by Category
-      produces:
-        - application/json
-      parameters:
-        - name: serviceCategoryId
-          in: path
-          description: ID of service Category to return
-          required: true
-          type: integer
-          format: int64
-      responses:
-        '200':
-          description: A service with the ID
-          schema:
-            $ref: '#/definitions/Service'
-        '404':
-          description: Service not found        
-      
+    
       
   /services/{serviceId}/volunteers:
     get:
