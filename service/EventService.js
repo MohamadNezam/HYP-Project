@@ -26,7 +26,7 @@ exports.eventsDbSetup = function(connection) {
  * service String Text search between events by service (optional)
  * returns List
  **/
-exports.eventsGET = function(limit,offset,date,manager,service) {
+exports.eventsGET = function(limit,offset,date,manager,service,order) {
   if(!limit) limit = 10;
   if(!offset) offset = 0;
 
@@ -40,6 +40,7 @@ exports.eventsGET = function(limit,offset,date,manager,service) {
   if(date) query = query.where('event_date', date);
   if(manager) query = query.where('id_manager', manager);
   if(service) query = query.where('id_service', service);
+  if(order) query = query.orderBy(order, 'desc');
 
   return query.then(data => {
     return data.map( e => {

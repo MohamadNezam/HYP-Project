@@ -31,6 +31,7 @@ module.exports.eventsGET = function eventsGET (req, res, next) {
   var date = req.swagger.params['date'].value;
   var manager = req.swagger.params['manager'].value;
   var service = req.swagger.params['service'].value;
+  var order = req.swagger.params['order'].value;
   Event.eventsGET(limit,offset,date,manager,service)
     .then(function (response) {
       utils.writeJson(res, response);
