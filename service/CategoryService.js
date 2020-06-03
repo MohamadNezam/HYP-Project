@@ -70,7 +70,7 @@ exports.categoriesCategoryIdServicesGET = function(categoryId) {
   var query = query.join('services', 'activities.id_activity', 'services.id_activity');
   var query = query.select(
     'activities.id_activity', 'activities.location', 'activities.title', 'activities.description', 
-    'activities.start_time', 'activities.end_time', 'services.service_day', 'services.capacity', 
+    'activities.start_time', 'activities.end_time', 'activities.image', 'services.service_day', 'services.capacity', 
     'services.age', 'services.id_category');
   var query = query.where('services.id_category', categoryId);
 
