@@ -1,7 +1,13 @@
 "use strict";
 
 $(document).ready(() => {
-  fetchServices(5);
+ 
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const serviceID = urlParams.get('serviceID');
+    console.log(serviceID);
+    if(serviceID != null)
+    fetchServices(serviceID);
 });
 
                    
@@ -26,7 +32,7 @@ function drawServiceDetailes(data) {
 
 function fetchServices(serviceId) {
     jQuery.ajax({
-        url: 'https://cors-anywhere.herokuapp.com/https://hyp-project.herokuapp.com/api/services/'+serviceId ,
+        url: 'https://hyp-project.herokuapp.com/api/services/'+serviceId ,
         type: 'GET',
         dataType: 'json',
         Origin: "https://hyp-project.herokuapp.com",
