@@ -1,36 +1,22 @@
 "use strict";
 
 $(document).ready(() => {
-  fetchServices('https://hyp-project.herokuapp.com/api/services');
+
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const serviceID = urlParams.get('CategoryId');
+    console.log(serviceID);
+    if(serviceID != null)
+    fetchServices('https://hyp-project.herokuapp.com/api/categories/'+serviceID+'/services');
+    else{
+        fetchServices('https://hyp-project.herokuapp.com/api/services');
+    }
 });
 
-function drawServices(data) {
-    var date = '';
-    var dateData = '';
-    var time = '';
+function drawServices(data) {  
     var s = '';
-    var shortDescription= 'hh';
-    var backgroung='bg-light';
-    /*
-    var id_activity='';
-    var location= '';
-    var title= '';
-    
-    var start_time= '';
-    var end_time= '';
-    var image= '';
-    var service_day= '';
-    var capacity= '';
-    var age= '';
-    var id_category= '';
-    
-    */
-       
-         
-
   for (var i = 0; i < data.length; i++) {
-        //data.length
-        
+       
          s = s        +'<div class="card col-sm-3  mt-3 ml-4 mb-4 shadow-sm sechover">'				
                       +'<a href="/serviceDetailes.html?serviceID='+data[i].id_activity+'"> <img class="img-fluid" src="'+data[i].image+'" alt="'+data[i].image+'"></a>'
                       +' <div class="card-body">'
