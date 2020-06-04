@@ -1,7 +1,7 @@
 "use strict";
 
 $(document).ready(() => {
-  fetchEvents('https://cors-anywhere.herokuapp.com/https://hyp-project.herokuapp.com/api/events');
+  fetchEvents('https://hyp-project.herokuapp.com/api/events');
 });
 
 function drawEvents(data) {
