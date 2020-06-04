@@ -58,12 +58,12 @@
             
        */
        
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.js"></script>
-	<script>
+  
+
+ 
 		(function($) {
 	
-	"use strict";
+	 
 	
 	
 	//Hide Loading Box (Preloader)
