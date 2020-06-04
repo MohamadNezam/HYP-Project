@@ -7,7 +7,14 @@ $(document).ready(() => {
     const serviceID = urlParams.get('CategoryId');
     console.log(serviceID);
     if(serviceID != null)
-    fetchServices('https://hyp-project.herokuapp.com/api/categories/'+serviceID+'/services');
+    {
+    	fetchServices('https://hyp-project.herokuapp.com/api/categories/'+serviceID+'/services');
+       document.getElementById("validationCustom03").value=serviceID;
+ 
+  	var text=$("#validationCustom03 option:selected").text();  
+ 	 document.getElementById("servicesSelector").innerHTML =  text +  " Services";
+    }
+    
     else{
         fetchServices('https://hyp-project.herokuapp.com/api/services');
     }
