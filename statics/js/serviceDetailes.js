@@ -14,7 +14,7 @@ $(document).ready(() => {
 	
 
 function drawServiceDetailes(data) {
- serviceName
+ 
     document.getElementById("serviceDay").innerHTML = data[0].service_day;
     document.getElementById("servicelocation").innerHTML = data[0].location;
     document.getElementById("servicetitle").innerHTML = data[0].title;
