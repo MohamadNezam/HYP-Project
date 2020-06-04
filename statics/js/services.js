@@ -32,10 +32,10 @@ function drawServices(data) {
         //data.length
         
          s = s        +'<div class="card col-sm-3  mt-3 ml-4 mb-4 shadow-sm sechover">'				
-                      +'<a href=/serviceDetailes.html?serviceID="+'data[i].id_activity'+"> <img class="img-fluid" src="'+data[i].image+'" alt="'+data[i].image+'"></a>'
+                      +'<a href="#"> <img class="img-fluid" src="'+data[i].image+'" alt="'+data[i].image+'"></a>'
                       +' <div class="card-body">'
                       +'  <h5><b>'+data[i].title+'</b></h5>'
-                      +' <h6 class="card-text">'+data[i].description.substring(0,40)+'...'+' <u class="linkcolor"> <a href=/serviceDetailes.html?serviceID="+'data[i].id_activity'+">more</a> </u></h6>'
+                      +' <h6 class="card-text">'+data[i].description.substring(0,40)+'...'+' <u class="linkcolor"> <a href="/serviceDetailes.html?serviceID=+'data[i].id_activity'+">more</a> </u></h6>'
                       +'<div class="d-flex justify-content-between align-items-center">  '
                       +' <small class="text-muted">'+data[i].service_day+'</small>'
                       +'</div></div>  </div>'
