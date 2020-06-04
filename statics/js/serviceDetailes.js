@@ -22,7 +22,7 @@ function drawServiceDetailes(data) {
     document.getElementById("servicestart_time").innerHTML = data[0].start_time;
     document.getElementById("serviceend_time").innerHTML = data[0].end_time;
     //document.getElementById("serviceimage").innerHTML = data[0].image;
-    document.getElementById("serviceimage").style.backgroundImage = "url("+data[0].image+")";
+    document.getElementById("serviceimage").style.backgroundImage = "url("+data[0].image+") center/cover no-repeat";
     
     document.getElementById("servicecapacity").innerHTML = data[0].capacity;
   document.getElementById("serviceName").innerHTML = data[0].title;
