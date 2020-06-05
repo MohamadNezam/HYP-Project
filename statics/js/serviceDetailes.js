@@ -21,50 +21,50 @@ function drawServiceDetailes(data) {
    		    document.getElementById("serviceDay").innerHTML = data[0].service_day;
 	}
 	catch(err) {
-	   console.log(err.message;); 
+	   console.log(err.message); 
 	}
 	try {
    		document.getElementById("servicelocation").innerHTML = data[0].location;
 	}
 	catch(err) {
-	   console.log(err.message;); 
+	   console.log(err.message); 
 	}
 	try {   document.getElementById("servicetitle").innerHTML = data[0].title;
    
 	}
 	catch(err) {
-	   console.log(err.message;); 
+	   console.log(err.message); 
 	}
 	try {
    		    document.getElementById("servicedescription").innerHTML = data[0].description;
 	}
 	catch(err) {
-	   console.log(err.message;); 
+	   console.log(err.message); 
 	}
 	try {
    		
   	  document.getElementById("servicestart_time").innerHTML = data[0].start_time;	
 	}
 	catch(err) {
-	   console.log(err.message;); 
+	   console.log(err.message); 
 	}
 	try {  document.getElementById("serviceend_time").innerHTML = data[0].end_time;
    
 	}
 	catch(err) {
-	   console.log(err.message;); 
+	   console.log(err.message); 
 	}
 	try {   document.getElementById("serviceimage").style.backgroundImage = "url("+data[0].image+") ";
    
 	}
 	catch(err) {
-	   console.log(err.message;); 
+	   console.log(err.message); 
 	}
 	try {     document.getElementById("serviceName").innerHTML = data[0].title;
    
 	}
 	catch(err) {
-	   console.log(err.message;); 
+	   console.log(err.message); 
 	}
     
  
