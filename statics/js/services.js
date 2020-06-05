@@ -17,7 +17,7 @@ $(document).ready(() => {
  	 document.getElementById("servicesSelector").innerHTML =  text +  " Services";
     }
 
-    fetchServices('https://hyp-project.herokuapp.com/api/categories/'+serviceID+'/services');
+   
     else{
         fetchServices('https://hyp-project.herokuapp.com/api/services');
     }
