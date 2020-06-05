@@ -25,15 +25,14 @@ exports.managersDbSetup = function(connection) {
  * returns List
  **/
 exports.managersGET = function(limit,offset,surename) {
-  if(!limit) limit = 10;
-  if(!offset) offset = 0;
-
-  var query = sqlDb('persons').limit(limit).offset(offset);
+  var query = sqlDb('persons');
   var query = query.join('managers', 'persons.id_person', 'managers.id_person');
   var query = query.select(
     'persons.id_person', 'persons.name', 'persons.surename', 'persons.email', 
     'persons.description', 'persons.photo', 'managers.phone', 'managers.role');
 
+  if(limit) query = query.limit(limit);
+  if(offset) query = query.offset(offset);
   if(surename) query = query.where('persons.surename', surename);
 
   return query.then(data => {
@@ -79,10 +78,7 @@ exports.managersManagerIdGET = function(managerId) {
  * returns List
  **/
 exports.managersManagerIdEventsGET = function(managerId,limit,offset) {
-  if(!limit) limit = 10;
-  if(!offset) offset = 0;
-
-  var query = sqlDb('activities').limit(limit).offset(offset);
+  var query = sqlDb('activities');
   var query = query.join('events', 'activities.id_activity', 'events.id_activity');
   var query = query.select(
     'activities.id_activity', 'activities.location', 'activities.title', 'activities.description', 
@@ -90,6 +86,9 @@ exports.managersManagerIdEventsGET = function(managerId,limit,offset) {
     'events.id_service');
   var query = query.where('events.id_manager', managerId);
 
+  if(limit) query = query.limit(limit);
+  if(offset) query = query.offset(offset);
+  
   return query.then(data => {
     return data.map( e => {
       console.log(e);

@@ -25,11 +25,10 @@ exports.categoriesDbSetup = function(connection) {
  * returns List
  **/
 exports.categoriesGET = function(limit,offset,name) {
-  if(!limit) limit = 10;
-  if(!offset) offset = 0;
-
-  var query = sqlDb('categories').limit(limit).offset(offset);
+  var query = sqlDb('categories');
   
+  if(limit) query = query.limit(limit);
+  if(offset) query = query.offset(offset);
   if(name) query = query.where('name', name);
   
   return query.then(data => {

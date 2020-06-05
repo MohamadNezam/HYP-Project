@@ -25,15 +25,14 @@ exports.volunteersDbSetup = function(connection) {
  * returns List
  **/
 exports.volunteersGET = function(limit,offset,surename) {
-  if(!limit) limit = 10;
-  if(!offset) offset = 0;
-
-  var query = sqlDb('persons').limit(limit).offset(offset);
+  var query = sqlDb('persons');
   var query = query.join('volunteers', 'persons.id_person', 'volunteers.id_person');
   var query = query.select(
     'persons.id_person', 'persons.name', 'persons.surename', 'persons.email', 
     'persons.description', 'persons.photo', 'volunteers.volunteer_time');
 
+  if(limit) query = query.limit(limit);
+  if(offset) query = query.offset(offset);
   if(surename) query = query.where('persons.surename', surename);
 
   return query.then(data => {
@@ -79,10 +78,7 @@ exports.volunteersVolunteerIdGET = function(volunteerId) {
  * returns List
  **/
 exports.volunteersVolunteerIdEventsGET = function(volunteerId,limit,offset) {
-  if(!limit) limit = 10;
-  if(!offset) offset = 0;
-
-  var query = sqlDb('activities').limit(limit).offset(offset);
+  var query = sqlDb('activities');
   var query = query.join('events', 'activities.id_activity', 'events.id_activity');
   var query = query.join('volunteers_events', 'events.id_activity', 'volunteers_events.id_event');
   var query = query.select(
@@ -90,6 +86,9 @@ exports.volunteersVolunteerIdEventsGET = function(volunteerId,limit,offset) {
     'activities.start_time', 'activities.end_time', 'events.event_date', 'events.id_manager', 
     'events.id_service');
   var query = query.where('volunteers_events.id_volunteer', volunteerId);
+
+  if(limit) query = query.limit(limit);
+  if(offset) query = query.offset(offset);
 
   return query.then(data => {
     return data.map( e => {
@@ -110,10 +109,7 @@ exports.volunteersVolunteerIdEventsGET = function(volunteerId,limit,offset) {
  * returns List
  **/
 exports.volunteersVolunteerIdServicesGET = function(volunteerId,limit,offset) {
-  if(!limit) limit = 10;
-  if(!offset) offset = 0;
-
-  var query = sqlDb('activities').limit(limit).offset(offset);
+  var query = sqlDb('activities');
   var query = query.join('services', 'activities.id_activity', 'services.id_activity');
   var query = query.join('volunteers_services', 'services.id_activity', 'volunteers_services.id_service');
   var query = query.select(
@@ -121,6 +117,9 @@ exports.volunteersVolunteerIdServicesGET = function(volunteerId,limit,offset) {
     'activities.start_time', 'activities.end_time', 'services.service_day', 'services.capacity', 
     'services.age', 'services.id_category');
   var query = query.where('volunteers_services.id_volunteer', volunteerId);
+
+  if(limit) query = query.limit(limit);
+  if(offset) query = query.offset(offset);
 
   return query.then(data => {
     return data.map( e => {

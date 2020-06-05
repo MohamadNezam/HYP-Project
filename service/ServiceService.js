@@ -27,16 +27,15 @@ exports.servicesDbSetup = function(connection) {
  * returns List
  **/
 exports.servicesGET = function(limit,offset,day,age,category) {
-  if(!limit) limit = 10;
-  if(!offset) offset = 0;
-
-  var query = sqlDb('activities').limit(limit).offset(offset);
+  var query = sqlDb('activities');
   var query = query.join('services', 'activities.id_activity', 'services.id_activity');
   var query = query.select(
     'activities.id_activity', 'activities.location', 'activities.title', 'activities.description', 
     'activities.start_time', 'activities.end_time', 'activities.image', 'services.service_day', 'services.capacity', 
     'services.age', 'services.id_category');
 
+  if(limit) query = query.limit(limit);
+  if(offset) query = query.offset(offset);
   if(day) query = query.where('event_day', day);
   if(age) query = query.where('age', '<=', age);
   if(category) query = query.where('id_category', category);

@@ -27,16 +27,15 @@ exports.eventsDbSetup = function(connection) {
  * returns List
  **/
 exports.eventsGET = function(limit,offset,date,manager,service,order) {
-  if(!limit) limit = 10;
-  if(!offset) offset = 0;
-
-  var query = sqlDb('activities').limit(limit).offset(offset);
+  var query = sqlDb('activities');
   var query = query.join('events', 'activities.id_activity', 'events.id_activity');
   var query = query.select(
     'activities.id_activity', 'activities.location', 'activities.title', 'activities.description', 
     'activities.start_time', 'activities.end_time', 'activities.image', 'events.event_date', 'events.id_manager', 
     'events.id_service');
 
+  if(limit) query = query.limit(limit);
+  if(offset) query = query.offset(offset);
   if(date) query = query.where('event_date', date);
   if(manager) query = query.where('id_manager', manager);
   if(service) query = query.where('id_service', service);
@@ -60,9 +59,6 @@ exports.eventsGET = function(limit,offset,date,manager,service,order) {
  * returns List
  **/
 exports.eventsMonthGET = function(limit,offset) {
-  if(!limit) limit = 10;
-  if(!offset) offset = 0;
-
   var date = new Date();
   var month = date.getMonth() + 1;
 
@@ -74,6 +70,9 @@ exports.eventsMonthGET = function(limit,offset) {
     'events.id_service');
   var query = query.andWhereRaw(`EXTRACT(MONTH FROM events.event_date::date) = ?`, [month]);
 
+  if(limit) query = query.limit(limit);
+  if(offset) query = query.offset(offset);
+  
   return query.then(data => {
     return data.map( e => {
       console.log(e);
