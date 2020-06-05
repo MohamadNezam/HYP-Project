@@ -31,7 +31,7 @@ p {
 .one {
   list-style: none;
   padding: 0;
-  margin: 100px 0;
+  margin-top:50px;
 }
 .one > li {
   background: #FFFFFF;
@@ -76,7 +76,7 @@ p {
   -moz-border-radius: 50%;
   height: 500px;
   width: 500px;
-  background: #D75E3D;
+  background: #1E5858;
   display: block;
   position: absolute;
   bottom: -300px;
@@ -87,7 +87,7 @@ p {
   width: 50px;
 }
 .one > li span:hover {
-  background: #D75E3D;
+  background:-webkit-linear-gradient(left, #3AAFA5, #4FAF8B);
 }
 .one > li h3 {
   margin-top: 40px;
@@ -604,7 +604,8 @@ to {
   text-transform: uppercase;
   font-weight: 300;
   font-size: 12px;
- margin-top: 5px  color: #2F7ABE;
+  margin-top: 5px;
+  color: #2F7ABE;
 }
 .five .social {
   list-style: none;
@@ -1268,4 +1269,12 @@ background-position: center 10px;
  100% {
 background-position: center top;
 }
+}
+
+.contact{
+text-align: center;
+}
+
+.breadcrumb{
+	background-color: white;
 }
