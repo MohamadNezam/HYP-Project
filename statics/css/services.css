@@ -11,47 +11,7 @@
 
 
 
-.header/*{padding:10px 0px;background:#282e3c;}*/{ padding: 10px 16px;background:#143ca1;color:#000;font-weight:400;font-size:16px;}/*position: fixed;z-index: 9;width: 100%;top: 0;}postion fixed without stricy postion:fixed start*/
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.darkHeader{
-height: auto; 
-background-color:#000 ;
-position: fixed;
-top:0;
-width: 100%;
-z-index:99;
-}
-.darkHeader a{color:#2ec4b6 !important;}
-
-/*stricy content end*/
-ul {margin: 0;padding: 0;}
-.content {padding: 16px;}
-.container{width:1170px;margin:0 auto;}
-.sticky {position: fixed;top: 0;width: 100%}
-.sticky + .content{padding-top: 102px;}
-.logo{width:20%;float:left;}
-.navigation{float:right;}
-.navigation ul li{list-style:none;display:inline-block;margin-right:20px;margin-top:10px;}
-.navigation ul li a{color:#fff;}
-.navigation ul li a:hover{text-decoration:none;}
-.nav-home:after{border-top: 2px solid #9f4f5c;display: block;width:45px;content: "";margin: 8px auto 0;}
-
-
-.w3l_header {font-size: 3em;color: #262c38;letter-spacing: 1px;position: relative;font-weight: 600;text-align: left;}
-.welcome-to-travel{margin-bottom:50px;}
-.wthree_head_section p {font-size: 15px;text-align: left;margin: 20px auto;width: 60%;color: #5e5e5e;line-height: 1.8em;}
-.w3l_header:after {border-top: 2px solid #9f4f5c;display: block;width: 81px;content: "";margin: 8px auto 0;}
-.about-grid1 {background: url(https://bestjquery.com/tutorial/product-grid/demo9/images/img-2.jpg) no-repeat center;background-size: cover;min-height: 450px;border: 1px solid #d6d6d6;}
-.about-grid2 {padding: 0em 0 0 4em;}
-.about-subgrid h6 {color: #000;text-transform:capitalize;font-size: 20px;font-weight: bold;font-style: italic;margin: 0;}
-.about-subgrid h2 {font-size: 2.2em;text-transform: uppercase;color: #000;margin: 0.5em 0;display: inline-block;border-right: 5px double #9f4f5c;padding-right: 10px;}
-.about-subgrid span {color: #000;font-weight: 800;font-size: 1em;padding-left: 27px;letter-spacing: 1px;text-transform: uppercase;}
-.about-subgrid h5 {color: #000;font-size: 1.5em;text-transform: capitalize;margin: 1em 0;border: 2px solid #9f4f5c;display: inline-block;padding: 5px 10px;width: 50%;}
-ul.w3l-about-list {padding: 0em 0 0 2em;}
-ul.w3l-about-list li {list-style-type: square;font-size: 1.2em;color: #000;line-height: 2;letter-spacing: 0.5px;font-style: italic;font-weight: 600;}
-
-/*banner- fixed travel perfection--css-image-style*/
-.middle-w3l {width: auto; height: 680px;  background: url(../img/fotolia-volunteer-image-for-vol-resource-center1.jpg) no-repeat fixed;background-size: cover;padding: 0em 0 8em;}
+.middle-w3l {width: auto; height: 680px;  background: url(../img/fotolia-volunteer-image-for-vol-resource-center1.jpg) no-repeat fixed;background-size: cover;padding: 10em 0 8em;}
 .middle-left-w3l {text-align: left;width: 70%;float: left;}
 .middle-left-w3l h3 {color: #fff;font-size: 90px;line-height: 1.4;}
 .middle-left-w3l h6 {color: #fff;margin: 10px 0 20px;}
