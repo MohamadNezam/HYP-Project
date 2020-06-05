@@ -1,6 +1,9 @@
  #headerContent{
     padding: 31px
 }
+.breadcrumb{
+	background-color: white;
+}
 
 * {
   font-family: Open Sans;
