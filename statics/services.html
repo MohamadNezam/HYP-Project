@@ -2,15 +2,15 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>services page</title>
-        <link rel="stylesheet" type="text/css" href="css/services.css">
+	<title>home page</title>
+    <link rel="stylesheet" type="text/css" href="css/services.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+     
 </head>
 
 <body>
@@ -18,38 +18,45 @@
 
 <!--head-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
- 
+
+
+<!--	
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Services</li>
+        </ol>
+    </nav>
+ -->
 <main>
 
-    <div class="middle-w3l">
-    <p class="postion"><a href="#">Home</a> / Services</p>
+        
+        <div class="middle-w3l">
+    <p class="postion"><a href="/index.html">Home</a> / Services</p>
 	<div class="container">
-	
+    <div class="middle-w3l">
+	 
 	<div class="middle-left-w3l">
-	
 	<h3>SERVICES</h3>
 	<p>VOLUNTEERARO provide sport and musical instruments classes, so if you are interested scroll down.</p>
 	<div class="readmore-w3-agileits about-read">
 	</div>
-	</div>
+	 
 	</div>
 </div>
+</div></div>
+     <section id="part1" >
+    <div  class="container ">
+       
     
-    <section id="part1" >
-        <div class="container">
-            <div class="text-center py-4">
-              
-              
-                <h1 class="jumbotron-heading topic">Sport Training</h1>
-                
-                
-				  <div class="col-md-2 mb-1 dropdown">
-					
-					  <select class="form-control form-control-lg" name="category" id="validationCustom03" onchange="ChangecatList()" required>
+	    
+	       <div class="text-center py-4">
+                <h1  id="servicesSelector" class="jumbotron-heading topic">Sport Training</h1> 
+				  <div class="col-md-2 mb-1 dropdown">		
+					  <select class="form-control form-control-lg" name="category" id="validationCustom03" onchange="servicesDropdownSelector(this);" required>
 						<option value="">All </option>
-						<option value="Classroom Instruction and Assessment">Music</option>
-						<option value="Curriculum Development and Alignment">Sport</option>
-						
+						<option value="1">Music</option>
+						<option value="2">Sport</option>	
 					  </select>
 					<div class="invalid-feedback">
 						Please provide a category.
@@ -57,283 +64,24 @@
 				  </div>
             </div>
           
-               
-                <div class="carousel-inner">
-                
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="card mb-4 shadow-sm sechover">
-                                    
-										<a href="#">
-										 <img class="img-fluid" src="img/swimming1.jpg" alt="">
-										 
-										</a>
-                                   
-                                    <div class="card-body">
-                                       
-                                        <h5><b>Swimming</b></h5>
-                                        <h6 class="card-text">Volunteeraro prepare these classes for both kids and adult for free and no matter what <u class="linkcolor">more </u></h6>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            
-                                        <small class="text-muted">Agust 31</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card mb-4 shadow-sm sechover">
-                                    
-										<a href="#">
-										 <img class="img-fluid" src="img/swimming1.jpg" alt="">
-										 
-										</a>
-                                   
-                                    <div class="card-body">
-                                       
-                                        <h5><b>Swimming</b></h5>
-                                        <h6 class="card-text">Volunteeraro prepare these classes for both kids and adult for free and no matter what <u class="linkcolor">more </u></h6>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                             
-                                        <small class="text-muted">Agust 31</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card mb-4 shadow-sm sechover">
-                                    
-										<a href="#">
-										 <img class="img-fluid" src="img/swimming1.jpg" alt="">
-										 
-										</a>
-                                   
-                                    <div class="card-body">
-                                       
-                                        <h5><b>Swimming</b></h5>
-                                        <h6 class="card-text">Volunteeraro prepare these classes for both kids and adult for free and no matter what <u class="linkcolor">more </u></h6>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            
-                                        <small class="text-muted">Agust 31</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="card mb-4 shadow-sm sechover">
-                                    
-										<a href="#">
-										 <img class="img-fluid" src="img/swimming1.jpg" alt="">
-										 
-										</a>
-                                   
-                                    <div class="card-body">
-                                       
-                                        <h5><b>Swimming</b></h5>
-                                        <h6 class="card-text">Volunteeraro prepare these classes for both kids and adult for free and no matter what <u class="linkcolor">more </u></h6>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                           
-                                        <small class="text-muted">Agust 31</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card mb-4 shadow-sm sechover">
-                                    
-										<a href="#">
-										 <img class="img-fluid" src="img/swimming1.jpg" alt="">
-										 
-										</a>
-                                   
-                                    <div class="card-body">
-                                       
-                                        <h5><b>Swimming</b></h5>
-                                        <h6 class="card-text">Volunteeraro prepare these classes for both kids and adult for free and no matter what <u class="linkcolor">more </u></h6>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                           
-                                        <small class="text-muted">Agust 31</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card mb-4 shadow-sm sechover">
-                                    
-										<a href="#">
-										 <img class="img-fluid" src="img/swimming1.jpg" alt="">
-										 
-										</a>
-                                   
-                                    <div class="card-body">
-                                       
-                                        <h5><b>Swimming</b></h5>
-                                        <h6 class="card-text">Volunteeraro prepare these classes for both kids and adult for free and no matter what <u class="linkcolor">more </u></h6>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                           
-                                        <small class="text-muted">Agust 31</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                 
-                </div>
-               
+	     
+	    
+	    
+	    
+	    
+	    
+	    <div class="carousel-inner">
+  		  <div id="services"  class="row">
       
-    </section>
-
-    <section id="part2" >
-        <div class="container">
-            <div class="text-center py-4">
-              
-				  <div class="col-md-2 mb-1 dropdown">
-					
-					<div class="invalid-feedback">
-						Please provide a category.
-					</div>
-				  </div>
-            </div>
-          
-               
-                <div class="carousel-inner">
-                
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="card mb-4 shadow-sm sechover">
-                                    
-										<a href="#">
-										 <img class="img-fluid" src="img/swimming1.jpg" alt="">
-										 
-										</a>
-                                   
-                                    <div class="card-body">
-                                       
-                                        <h5><b>Swimming</b></h5>
-                                        <h6 class="card-text">Volunteeraro prepare these classes for both kids and adult for free and no matter what <u class="linkcolor">more </u></h6>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            
-                                        <small class="text-muted">Agust 31</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card mb-4 shadow-sm sechover">
-                                    
-										<a href="#">
-										 <img class="img-fluid" src="img/swimming1.jpg" alt="">
-										 
-										</a>
-                                   
-                                    <div class="card-body">
-                                       
-                                        <h5><b>Swimming</b></h5>
-                                        <h6 class="card-text">Volunteeraro prepare these classes for both kids and adult for free and no matter what <u class="linkcolor">more </u></h6>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                             
-                                        <small class="text-muted">Agust 31</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card mb-4 shadow-sm sechover">
-                                    
-										<a href="#">
-										 <img class="img-fluid" src="img/swimming1.jpg" alt="">
-										 
-										</a>
-                                   
-                                    <div class="card-body">
-                                       
-                                        <h5><b>Swimming</b></h5>
-                                        <h6 class="card-text">Volunteeraro prepare these classes for both kids and adult for free and no matter what <u class="linkcolor">more </u></h6>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            
-                                        <small class="text-muted">Agust 31</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="card mb-4 shadow-sm sechover">
-                                    
-										<a href="#">
-										 <img class="img-fluid" src="img/swimming1.jpg" alt="">
-										 
-										</a>
-                                   
-                                    <div class="card-body">
-                                       
-                                        <h5><b>Swimming</b></h5>
-                                        <h6 class="card-text">Volunteeraro prepare these classes for both kids and adult for free and no matter what <u class="linkcolor">more </u></h6>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                           
-                                        <small class="text-muted">Agust 31</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card mb-4 shadow-sm sechover">
-                                    
-										<a href="#">
-										 <img class="img-fluid" src="img/swimming1.jpg" alt="">
-										 
-										</a>
-                                   
-                                    <div class="card-body">
-                                       
-                                        <h5><b>Swimming</b></h5>
-                                        <h6 class="card-text">Volunteeraro prepare these classes for both kids and adult for free and no matter what <u class="linkcolor">more </u></h6>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                           
-                                        <small class="text-muted">Agust 31</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card mb-4 shadow-sm sechover">
-                                    
-										<a href="#">
-										 <img class="img-fluid" src="img/swimming1.jpg" alt="">
-										 
-										</a>
-                                   
-                                    <div class="card-body">
-                                       
-                                        <h5><b>Swimming</b></h5>
-                                        <h6 class="card-text">Volunteeraro prepare these classes for both kids and adult for free and no matter what <u class="linkcolor">more </u></h6>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                           
-                                        <small class="text-muted">Agust 31</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                 
-                </div>
-               
-      
-    </section>
-    
-
+   	 	 </div>
+   	   </div>
+   
+</div>
+	     
+	         </section>
 </main>
 	
     
       <script src="js/services.js"></script>
 </body>
 </html>
-
-  
-
