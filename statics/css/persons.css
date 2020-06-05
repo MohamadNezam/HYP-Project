@@ -270,3 +270,7 @@
     opacity: 1;
     transform: translateY(-2rem);
 }
+
+.breadcrumb{
+	background-color: white;
+}
