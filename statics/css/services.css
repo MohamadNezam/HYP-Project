@@ -51,7 +51,7 @@ ul.w3l-about-list {padding: 0em 0 0 2em;}
 ul.w3l-about-list li {list-style-type: square;font-size: 1.2em;color: #000;line-height: 2;letter-spacing: 0.5px;font-style: italic;font-weight: 600;}
 
 /*banner- fixed travel perfection--css-image-style*/
-.middle-w3l {width: auto; height: 680px;  background: url(../img/fotolia-volunteer-image-for-vol-resource-center1.jpg) no-repeat fixed;background-size: cover;padding: 10em 0 8em;}
+.middle-w3l {width: auto; height: 680px;  background: url(../img/fotolia-volunteer-image-for-vol-resource-center1.jpg) no-repeat fixed;background-size: cover;padding: 0em 0 8em;}
 .middle-left-w3l {text-align: left;width: 70%;float: left;}
 .middle-left-w3l h3 {color: #fff;font-size: 90px;line-height: 1.4;}
 .middle-left-w3l h6 {color: #fff;margin: 10px 0 20px;}
