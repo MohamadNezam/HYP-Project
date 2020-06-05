@@ -15,17 +15,66 @@ $(document).ready(() => {
 
 function drawServiceDetailes(data) {
  
-    document.getElementById("serviceDay").innerHTML = data[0].service_day;
-    document.getElementById("servicelocation").innerHTML = data[0].location;
-    document.getElementById("servicetitle").innerHTML = data[0].title;
-    document.getElementById("servicedescription").innerHTML = data[0].description;
-    document.getElementById("servicestart_time").innerHTML = data[0].start_time;
-    document.getElementById("serviceend_time").innerHTML = data[0].end_time;
-    //document.getElementById("serviceimage").innerHTML = data[0].image;
-    document.getElementById("serviceimage").style.backgroundImage = "url("+data[0].image+") ";
+	
+	
+	try {
+   		    document.getElementById("serviceDay").innerHTML = data[0].service_day;
+	}
+	catch(err) {
+	   console.log(err.message;); 
+	}
+	try {
+   		document.getElementById("servicelocation").innerHTML = data[0].location;
+	}
+	catch(err) {
+	   console.log(err.message;); 
+	}
+	try {   document.getElementById("servicetitle").innerHTML = data[0].title;
+   
+	}
+	catch(err) {
+	   console.log(err.message;); 
+	}
+	try {
+   		    document.getElementById("servicedescription").innerHTML = data[0].description;
+	}
+	catch(err) {
+	   console.log(err.message;); 
+	}
+	try {
+   		
+  	  document.getElementById("servicestart_time").innerHTML = data[0].start_time;	
+	}
+	catch(err) {
+	   console.log(err.message;); 
+	}
+	try {  document.getElementById("serviceend_time").innerHTML = data[0].end_time;
+   
+	}
+	catch(err) {
+	   console.log(err.message;); 
+	}
+	try {   document.getElementById("serviceimage").style.backgroundImage = "url("+data[0].image+") ";
+   
+	}
+	catch(err) {
+	   console.log(err.message;); 
+	}
+	try {     document.getElementById("serviceName").innerHTML = data[0].title;
+   
+	}
+	catch(err) {
+	   console.log(err.message;); 
+	}
     
-    document.getElementById("servicecapacity").innerHTML = data[0].capacity;
-  document.getElementById("serviceName").innerHTML = data[0].title;
+ 
+
+  
+    //document.getElementById("serviceimage").innerHTML = data[0].image;
+ 
+    
+   // document.getElementById("servicecapacity").innerHTML = data[0].capacity;
+
  
 }
 
