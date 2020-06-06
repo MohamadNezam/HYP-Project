@@ -60,7 +60,7 @@ function drawEvents(data) {
 
     }
 	
-	  s = s +' /div></div></div>'     ;
+	  s = s +' </div></div></div>'     ;
      
     return s;
 }
