@@ -49,6 +49,7 @@
                 <div class="dropdown-menu">
                      <a href="/events.html" class="dropdown-item">ALL Events</a>
                     <a href="/events.html?EventId=0" class="dropdown-item">Latest Events</a>
+			  <a href="/events.html?EventId=-1" class="dropdown-item">Current Month Events</a>
                 </div>
             </div>
              <a href="persons.html" class="nav-item nav-link">PERSONS</a>
@@ -87,6 +88,7 @@
 					  <select class="form-control form-control-lg" name="category" id="validationCustom03" onchange="eventsDropdownSelector(this);" required>
 						<option value="">ALL </option>
 						<option value="0">Latest</option>
+						  <option value="-1">Current Month</option>
 						  <option value="1">January</option>
                           <option value="2">February</option>
                           <option value="3">March</option>
