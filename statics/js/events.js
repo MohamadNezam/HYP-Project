@@ -79,7 +79,7 @@ function eventsDropdownSelector(sel) {
         fetchServices('http://hyp-project.herokuapp.com/api/events?limit=3&order=event_date');
     } 
     else if (x > 0){
-        fetchServices('https://hyp-project.herokuapp.com/api/events?month='+parseInt(selectedMonthID));
+        fetchServices('https://hyp-project.herokuapp.com/api/events?month='+parseInt(x));
     }else{
         fetchEvents('https://hyp-project.herokuapp.com/api/events');
     }
