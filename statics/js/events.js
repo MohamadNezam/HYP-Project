@@ -5,15 +5,15 @@ $(document).ready(() => {
     
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const selectedMonthID = urlParams.get('month');
+    const selectedMonthID = urlParams.get('EventId');
     console.log(selectedMonthID);
     if(selectedMonthID == -1)
     fetchEvents('https://hyp-project.herokuapp.com/api/events/month');
     else if (selectedMonthID == 0){
-        fetchServices('http://hyp-project.herokuapp.com/api/events?limit=3&order=event_date');
+        fetchEvents('http://hyp-project.herokuapp.com/api/events?limit=3&order=event_date');
     } 
     else if (selectedMonthID > 0){
-        fetchServices('https://hyp-project.herokuapp.com/api/events?month='+parseInt(selectedMonthID));
+        fetchEvents('https://hyp-project.herokuapp.com/api/events?month='+parseInt(selectedMonthID));
     }else{
         fetchEvents('https://hyp-project.herokuapp.com/api/events');
     }
@@ -76,10 +76,10 @@ function eventsDropdownSelector(sel) {
     if(x == -1)
     fetchEvents('https://hyp-project.herokuapp.com/api/events/month');
     else if (x == 0){
-        fetchServices('http://hyp-project.herokuapp.com/api/events?limit=3&order=event_date');
+        fetchEvents('https://hyp-project.herokuapp.com/api/events?limit=3&order=event_date');
     } 
     else if (x > 0){
-        fetchServices('https://hyp-project.herokuapp.com/api/events?month='+parseInt(x));
+        fetchEvents('https://hyp-project.herokuapp.com/api/events?month='+parseInt(x));
     }else{
         fetchEvents('https://hyp-project.herokuapp.com/api/events');
     }
