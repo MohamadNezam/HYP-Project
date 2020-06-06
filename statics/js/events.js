@@ -86,6 +86,9 @@ function eventsDropdownSelector(sel) {
   document.getElementById("eventSelector").innerHTML =  text +  " Events";
     if(x == -1)
     fetchEvents('https://hyp-project.herokuapp.com/api/events/month');
+    else if (x == -2){
+        fetchEvents('https://hyp-project.herokuapp.com/api/events');
+    } 
     else if (x == 0){
         fetchEvents('https://hyp-project.herokuapp.com/api/events?limit=3&order=event_date');
     } 
