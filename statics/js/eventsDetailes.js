@@ -22,7 +22,7 @@ function drawEventDetailes(data) {
     document.getElementById("eventdescription").innerHTML = data[0].description;
     document.getElementById("eventstart_time").innerHTML = data[0].start_time;
     document.getElementById("eventend_time").innerHTML = data[0].end_time;  
-    document.getElementById("locationMap").append = data[0].location;
+ 
      $('#eventimage').css("background-image", "url(" + data[0].image + ")");
     $('#iFramelocation').attr('src', data[0].location);
 }
