@@ -10,7 +10,7 @@ $(document).ready(() => {
     if(selectedMonthID == -1)
     fetchEvents('https://hyp-project.herokuapp.com/api/events/month');
     else if (selectedMonthID == 0){
-        fetchEvents('http://hyp-project.herokuapp.com/api/events?limit=3&order=event_date');
+        fetchEvents('https://hyp-project.herokuapp.com/api/events?limit=3&order=event_date');
     } 
     else if (selectedMonthID > 0){
         fetchEvents('https://hyp-project.herokuapp.com/api/events?month='+parseInt(selectedMonthID));
