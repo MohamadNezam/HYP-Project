@@ -46,6 +46,11 @@ function drawEvents(data) {
        
          
 // /eventDetailes.html?eventID='+data[i].id_activity+'
+	if(data.length==0){
+		s ='<div class="tt-no-result">No results found.</div>';
+	}
+		
+	  
   for (var i = 0; i < data.length; i++) {
         //data.length
         
