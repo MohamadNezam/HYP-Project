@@ -61,7 +61,7 @@ function drawEvents(data) {
         //data.length
         
          s = s        +'<div class="card col-sm-3  mt-3 ml-4 mb-4 shadow-sm sechover">'				
-                      +'<a href="/eventDetailes.html?eventID='+data[i].id_activity+'"> <img class="img-fluid" src="'+data[i].image+'" alt=""></a>'
+                      +'<a href="/eventDetailes.html?eventID='+data[i].id_activity+'"> <img class="mt-3 img-fluid" src="'+data[i].image+'" alt=""></a>'
                       +' <div class="card-body">'
                       +'  <h5><b>'+data[i].title+'</b></h5>'
                       +' <h6 class="card-text">'+data[i].description.substring(0,40)+'...'+' <u class="linkcolor"> <a href="/eventDetailes.html?eventID='+data[i].id_activity+'">more</a> </u></h6>'
