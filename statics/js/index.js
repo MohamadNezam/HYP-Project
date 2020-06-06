@@ -54,8 +54,8 @@ function drawEvents(data) {
                +'<h5><b>'+data[i].title+'</b></h5>'
                +'<p> '+data[i].description.substring(0,15)+'... <a href="/eventDetailes.html?eventID='+data[i].id_activity+'">More</a>   </p>'
                +'</div>'
-          //     +'<img class="mt-3 img-fluid" src="'+data[i].image+'" alt="'+data[i].image+'">'
-	  +'<img src="img/495-4950576_calendar-schedule-png-icon-transparent-png.png" alt="">'
+               +'<img class="mt-3 img-fluid" src="'+data[i].image+'" alt="'+data[i].image+'">'
+	  //+'<img src="img/495-4950576_calendar-schedule-png-icon-transparent-png.png" alt="">'
                +'</div>'
                +'</div>';
 
