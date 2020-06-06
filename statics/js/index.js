@@ -86,8 +86,7 @@ function fetchEvents(ApiUrl) {
       anchors:['Home','About','Contact'],
       navigationTooltips:['Home','About','Contact'],
       });
-	</script>
-	<script>
+	 
       //Jquery auto height
      
     $(document).ready(function(){
