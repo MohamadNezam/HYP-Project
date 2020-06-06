@@ -26,7 +26,7 @@ exports.eventsDbSetup = function(connection) {
  * service String Text search between events by service (optional)
  * returns List
  **/
-exports.eventsGET = function(limit,offset,date,manager,service,order) {
+exports.eventsGET = function(limit,offset,date,manager,service,order,month) {
   var query = sqlDb('activities');
   var query = query.join('events', 'activities.id_activity', 'events.id_activity');
   var query = query.select(
@@ -40,6 +40,7 @@ exports.eventsGET = function(limit,offset,date,manager,service,order) {
   if(manager) query = query.where('id_manager', manager);
   if(service) query = query.where('id_service', service);
   if(order) query = query.orderBy(order, 'desc');
+  if(month) query = query.andWhereRaw(`EXTRACT(MONTH FROM events.event_date::date) = ?`, [month]);
 
   return query.then(data => {
     return data.map( e => {

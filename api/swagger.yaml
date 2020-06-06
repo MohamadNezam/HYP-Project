@@ -25,7 +25,6 @@ tags:
   description: "Everything about the categories of services of the association"
 schemes:
 - "https"
-- "http"
 paths:
   /managers:
     get:
@@ -39,7 +38,7 @@ paths:
       parameters:
       - name: "limit"
         in: "query"
-        description: "This is de number of items retrived, by default is 10"
+        description: "This is de number of items retrived"
         required: false
         type: "integer"
       - name: "offset"
@@ -104,7 +103,7 @@ paths:
         format: "int64"
       - name: "limit"
         in: "query"
-        description: "This is de number of items retrived, by default is 10"
+        description: "This is de number of items retrived"
         required: false
         type: "integer"
       - name: "offset"
@@ -134,7 +133,7 @@ paths:
       parameters:
       - name: "limit"
         in: "query"
-        description: "This is de number of items retrived, by default is 10"
+        description: "This is de number of items retrived"
         required: false
         type: "integer"
       - name: "offset"
@@ -199,7 +198,7 @@ paths:
         format: "int64"
       - name: "limit"
         in: "query"
-        description: "This is de number of items retrived, by default is 10"
+        description: "This is de number of items retrived"
         required: false
         type: "integer"
       - name: "offset"
@@ -235,7 +234,7 @@ paths:
         format: "int64"
       - name: "limit"
         in: "query"
-        description: "This is de number of items retrived, by default is 10"
+        description: "This is de number of items retrived"
         required: false
         type: "integer"
       - name: "offset"
@@ -265,7 +264,7 @@ paths:
       parameters:
       - name: "limit"
         in: "query"
-        description: "This is de number of items retrived, by default is 10"
+        description: "This is de number of items retrived"
         required: false
         type: "integer"
       - name: "offset"
@@ -294,6 +293,11 @@ paths:
         description: "Order the events by selected field in descending order"
         required: false
         type: "string"
+      - name: "month"
+        in: "query"
+        description: "Text search between events by month of the year"
+        required: false
+        type: "integer"
       responses:
         "200":
           description: "A collection of events"
@@ -316,7 +320,7 @@ paths:
       parameters:
       - name: "limit"
         in: "query"
-        description: "This is de number of items retrived, by default is 10"
+        description: "This is de number of items retrived"
         required: false
         type: "integer"
       - name: "offset"
@@ -396,7 +400,7 @@ paths:
       parameters:
       - name: "limit"
         in: "query"
-        description: "This is de number of items retrived, by default is 10"
+        description: "This is de number of items retrived"
         required: false
         type: "integer"
       - name: "offset"
@@ -494,7 +498,7 @@ paths:
       parameters:
       - name: "limit"
         in: "query"
-        description: "This is de number of items retrived, by default is 10"
+        description: "This is de number of items retrived"
         required: false
         type: "integer"
       - name: "offset"

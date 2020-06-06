@@ -4,8 +4,135 @@
         <title>Backend Documentation</title>
     </head>
     <body>
+        <h1>
+            Documentation of the backend part
+        </h1>
+        <br>
+        <h1>
+            > Deliverable D1
+        </h1>
+        <br>
+        <h2>
+            General group information
+        </h2>
         <p>
-            # Documentation of the Backend part
+            | Member n. | Role                       | First name | Last Name | Matricola | Email address                     |<br>
+            |-----------|----------------------------|------------|-----------|-----------|-----------------------------------|<br>
+            | 1         | Backend developer          | Victor     | Alzorriz  | 10729353  | victoralzorriz@gmail.com          |<br>
+            | 2         | Frontend developer         | Parniya    | Saeedzadeh| 10740816  | parniya.saeedzadeh@mail.polimi.it |<br>
+            | 3         | Backend/Frontend developer | Mohammed   | Nizam     | 10699585  | mohamad.nezam@mail.polimi.it      |
+        </p>
+        <br>
+        <h2>
+            Links to other deliverables
+        </h2>
+        <p>
+            - Deliverable D0: the web application is accessible at (<a href="https://hyp-project.herokuapp.com">https://hyp-project.herokuapp.com</a>).
+        </p>
+        <p>
+            - Deliverable D2: the YAML or JSON file containing the specification of the app API can be found at 
+            (<a href="https://hyp-project.herokuapp.com/backend/spect.yaml">https://hyp-project.herokuapp.com/backend/spect.yaml</a>).
+        </p>
+        <p>
+            - Deliverable D3: the SwaggerUI page of the same API is available at (<a href="https://hyp-project.herokuapp.com/backend/swaggerui">https://hyp-project.herokuapp.com/backend/swaggerui</a>).
+        </p>
+        <p>
+            - Deliverable D4: the source code of D0 is available as a zip file at (<a href="https://hyp-project.herokuapp.com/backend/app.zip">https://hyp-project.herokuapp.com/backend/app.zip</a>).
+        </p>
+        <p>
+            - Deliverable D5: the address of the online source control repository is available (https://examplegit.com). 
+            We hereby declare that this is a private repository and, upon request, we will give access to the instructors.
+        </p>
+        <br>
+        <h2>
+            Specification
+        </h2>
+        <h3>
+            Web Architecture
+        </h3>
+        <p>
+            Describe here, with a diagram, the components of your web application and how they interact. Highlight which parts belong to the 
+            application layer, data layer or presentation layer. How did you ensure that HTML is not rendered server side?
+        </p>
+        <br>
+        <h3>
+            API
+        </h3>
+        <h4>
+            REST compliance
+        </h4>
+        <p>
+            Describe here to what extent did you follow REST principles and what are the reasons for which you might have decided to diverge. 
+            Note, you must not describe the whole API here, just the design decisions.
+        </p>
+        <h4>
+            OpenAPI Resource models
+        </h4>
+        <p>
+            Describe here synthetically, which models you have introduced forresources.
+        </p>
+        <br>
+        <h3>
+            Data model
+        </h3>
+        <p>
+            Describe with an ER diagram the model used in the data layer of your web application. How these map to the OpenAPI data model?
+        </p>
+        <br>
+        <h2>
+            Implementation
+        </h2>
+        <h3>
+            Tools used
+        </h3>
+        <p>
+            Describe here which tools, languages and frameworks did you use for the backend of the application.
+        </p>
+        <br>
+        <h3>
+            Discussion
+        </h3>
+        <p>
+            - How did you make sure your web application adheres to the provided OpenAPI specification? Which method did 
+            you use to test all APIs endpoints against the expected response?<br>
+            - Why do you think your web application adheres to common practices to partition a REST-based web application 
+            (static assets vs. application data)<br>
+            - Describe synthetically why and how did you manage session state, what are the state change triggering actions 
+            (e.g., POST to login etc..).<br>
+            - Which technology did you use (relational or a no-SQL database) for managing the data model?
+        </p>
+        <br>
+        <h2>
+            Other information
+        </h2>
+        <h3>
+            Task assignment
+        </h3>
+        <p>
+            Describe here how development tasks have been subdivided among members of the group, e.g.:<br>
+            > - Foo worked on front end (80%) and OpenAPI Spec (20% of the time).
+        </p>
+        <br>
+        <h3>
+            Analysis of existing API
+        </h3>
+        <p>
+            Describe here the research of (full or part of) existing APIs that are similar in objectives and scope to the 
+            one implemented, that have possibly guided implementation choices (these should not be necessarily OpenAPI 
+            implementations). Toy APIs (such as the Swagger's Pet Store) or the example shown during lectures are not a 
+            valid response.
+        </p>
+        <br>
+        <h3>
+            Learning outcome
+        </h3>
+        <p>
+            What was the most important thing all the members have learned while developing this part of the project, 
+            what questions remained unanswered, how you will use what you've learned in your everyday life?<br>
+            Examples:<br>
+            - Foo learned to write SQL queries and Javascript but wanted to know more about caching, he's probably going 
+            to create his own startup with what she has learned
+            - Bar learned how to deploy on a cloud platform, he would have liked to know more about promises for asynchronous code..
         </p>
     </body>
 </html>
