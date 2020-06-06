@@ -65,9 +65,8 @@ function fetchEvents(ApiUrl) {
         Origin: "https://hyp-project.herokuapp.com",
         success: (data) => {
             console.log('ajax success');
-            var s = drawEvents(data);
-            
-            $('#owl-carousel').html(s);
+            var s = drawEvents(data);          
+	    $("#owl-carousel").append(s);
         },
         error: ()=>{
             notifyerror("error");
