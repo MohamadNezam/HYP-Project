@@ -16,11 +16,11 @@
             General group information
         </h2>
         <p>
-            | Member n. | Role                       | First name | Last Name | Matricola | Email address                     |<br>
-            |-----------|----------------------------|------------|-----------|-----------|-----------------------------------|<br>
-            | 1         | Backend developer          | Victor     | Alzorriz  | 10729353  | victoralzorriz@gmail.com          |<br>
-            | 2         | Frontend developer         | Parniya    | Saeedzadeh| 10740816  | parniya.saeedzadeh@mail.polimi.it |<br>
-            | 3         | Backend/Frontend developer | Mohammed   | Nizam     | 10699585  | mohamad.nezam@mail.polimi.it      |
+            | Member n. | Role   | First name | Last Name  | Matricola | Email address                     |<br>
+            |-----------|--------|------------|------------|-----------|-----------------------------------|<br>
+            | 1         | menber | Victor     | Alzorriz   | 10729353  | victoralzorriz@gmail.com          |<br>
+            | 2         | member | Parniya    | Saeedzadeh | 10740816  | parniya.saeedzadeh@mail.polimi.it |<br>
+            | 3         | admin  | Mohammed   | Nizam      | 10699585  | mohamad.nezam@mail.polimi.it      |
         </p>
         <br>
         <h2>
@@ -40,7 +40,7 @@
             - Deliverable D4: the source code of D0 is available as a zip file at (<a href="https://hyp-project.herokuapp.com/backend/app.zip">https://hyp-project.herokuapp.com/backend/app.zip</a>).
         </p>
         <p>
-            - Deliverable D5: the address of the online source control repository is available (https://examplegit.com). 
+            - Deliverable D5: the address of the online source control repository is available (<a href="https://github.com/MohamadNezam/HYP-Project">https://github.com/MohamadNezam/HYP-Project</a>).<br>
             We hereby declare that this is a private repository and, upon request, we will give access to the instructors.
         </p>
         <br>
@@ -51,8 +51,10 @@
             Web Architecture
         </h3>
         <p>
-            Describe here, with a diagram, the components of your web application and how they interact. Highlight which parts belong to the 
-            application layer, data layer or presentation layer. How did you ensure that HTML is not rendered server side?
+            <strong>Describe here, with a diagram, the components of your web application and how they interact. Highlight which parts belong to the 
+            application layer, data layer or presentation layer. How did you ensure that HTML is not rendered server side?</strong>
+            <br>
+
         </p>
         <br>
         <h3>
@@ -62,21 +64,46 @@
             REST compliance
         </h4>
         <p>
-            Describe here to what extent did you follow REST principles and what are the reasons for which you might have decided to diverge. 
-            Note, you must not describe the whole API here, just the design decisions.
+            <strong>Describe here to what extent did you follow REST principles and what are the reasons for which you might have decided to diverge. 
+            Note, you must not describe the whole API here, just the design decisions. </strong>
+            <br>
+            - We tried to follow as much as possible the REST principles and best practices. First we use simple endpoints with plural nouns, 
+            like "/volunteers" or "/events", as the REST principles suggest. We also rely a lot on parameters to filter and modify the data from 
+            the principal endpoints, like "/events?order=event_date&limit=3", instead of creating operational URLs. For the relationships we use 
+            sub-resource, like "/services/{serviceId}/volunteers", intead of URLs as the best practices suggest. We also used the appropriate 
+            operation for each case and since the application focuses on fetching resources from the server we use only GET operations for the API.
         </p>
         <h4>
             OpenAPI Resource models
         </h4>
         <p>
-            Describe here synthetically, which models you have introduced forresources.
+            <strong>Describe here synthetically, which models you have introduced forresources.</strong>
+            <br>
+            - For our API we defined 5 different models, Managers, Volunteers, Events, Services and Categories:<br>
+            - Manager: corresponds to a manager of the association, and contains the following data: id_person, name, surename, email, description, 
+            photo, phone and role. <br>
+            - Volunteer: corresponds to a volunteer of the association, and contains the following data: id_person, name, surename, email, description, 
+            photo and volunteer_time. <br>
+            - Event: corresponds to a event organized by the association, and contains the following data: id_activity, location, title, description, 
+            start_time, end_time, image, event_date, id_manager and id_service. <br>
+            - Service: corresponds to a service provided by the association, and contains the following data: id_activity, location, title, description,
+            start_time, end_time, image, day, capacity, age and id_category. <br>
+            - Category: corre to a category of services provided by the association, and contains the following data: id_category, title and description. <br>
+            If you want more information about the model you can check the API documentation in the SwaggerUI in the following link: 
+            <a href="https://hyp-project.herokuapp.com/backend/swaggerui">https://hyp-project.herokuapp.com/backend/swaggerui</a>
         </p>
         <br>
         <h3>
             Data model
         </h3>
         <p>
-            Describe with an ER diagram the model used in the data layer of your web application. How these map to the OpenAPI data model?
+            <strong>Describe with an ER diagram the model used in the data layer of your web application. How these map to the OpenAPI data model?</strong>
+            <br>
+            - The following ER diagram represent how the data is store in the database. As you can see in the diagram, the design of the database 
+            correlates well with the data models of the API, with the only difference that we are using inheritance to store the data in the 
+            database more efficiently.
+            <br><br>
+            <img src="img/diagramER.png">
         </p>
         <br>
         <h2>
@@ -86,20 +113,50 @@
             Tools used
         </h3>
         <p>
-            Describe here which tools, languages and frameworks did you use for the backend of the application.
+            <strong>Describe here which tools, languages and frameworks did you use for the backend of the application.</strong>
+            <br>
+            - For the backend part we use Javascript for the server programing and SQL to design and setup the database. <br>
+            First we used Swagger Editor to define the API of the application. <br>
+            Then we use NodeJs for our backend server together with the Swagger Editor to create a server template acording to our API specifications. <br>
+            Before starting with the database we setted up the server so it can return static assets, like html pages, so other team mates could start 
+            working on the frontend of the application. We did this by installing the library serve-static and defining the folder where the static 
+            assets where stored. <br>
+            Then we setted up the database, in our case we use Postgres, by creating two sql files, one with the sql code to create all the tables of 
+            the database, and other with the sql sentences to insert all the data in to the database. <br>
+            After having the database running, we setted up the data layer of the server by defining the connection between the database and the server, 
+            and calling all the different services that our web server provides throw the API. <br>
+            Finally we defined how the server will retrive the information from the database and returning it throw the API. For this task we use another 
+            library called knex.js to add another extra layer between the server and the database. This library helps us make the server independent from 
+            the database by executing the sql sentences dynamicaly depending of the type of database that we use. For example, right now we are using a 
+            Postgres database, but if in the future we want to use MySql, thanks to the library we wont have to change each sql sentences, we will only 
+            need to change the connection type and the knex.js library will do the rest. <br>
+            When all the parts where working we deployed the server on Heroku so it can be access anywhere.
         </p>
         <br>
         <h3>
             Discussion
         </h3>
         <p>
-            - How did you make sure your web application adheres to the provided OpenAPI specification? Which method did 
-            you use to test all APIs endpoints against the expected response?<br>
-            - Why do you think your web application adheres to common practices to partition a REST-based web application 
-            (static assets vs. application data)<br>
-            - Describe synthetically why and how did you manage session state, what are the state change triggering actions 
-            (e.g., POST to login etc..).<br>
-            - Which technology did you use (relational or a no-SQL database) for managing the data model?
+            <strong>How did you make sure your web application adheres to the provided OpenAPI specification? Which method did you use to test all APIs 
+            endpoints against the expected response? </strong>
+            <br>
+            - The first method we use to test the APIs endpoints was checking each of the endpoints URLs returned the correct information stored in the 
+            database. Then when we had the server deployed remotely and the SwaggerUI implement, we used it to test all the endpoints since thanks to its 
+            UI we can test each of the APIs endpoints easily with the push of a button. <br>
+            <br>
+            <strong>Why do you think your web application adheres to common practices to partition a REST-based web application (static assets vs. application data) </strong>
+            <br>
+            Our application adheres to common practices of REST application regarding static assets and application data because the server first provides the
+            user with the static html page and then the static page fetch the data he needs from the API. <br>
+            <br>
+            <strong>Describe synthetically why and how did you manage session state, what are the state change triggering actions (e.g., POST to login etc..).</strong>
+            <br>
+            - Since our application is the webpage of a voluntary association, and its main function is to showcase the different events and services that the 
+            association provides, it does not need that the user have to be loged in. For this reason we decided not to implement a login system. <br>
+            <br>
+            <strong>Which technology did you use (relational or a no-SQL database) for managing the data model? </strong>
+            <br>
+            - For data model we used the relational database provided by Postgres, since it has all the necesary functionalities and we can use it for free.
         </p>
         <br>
         <h2>
@@ -109,30 +166,38 @@
             Task assignment
         </h3>
         <p>
-            Describe here how development tasks have been subdivided among members of the group, e.g.:<br>
-            > - Foo worked on front end (80%) and OpenAPI Spec (20% of the time).
+            <strong>Describe here how development tasks have been subdivided among members of the group, e.g.:</strong>
+            <br>
+            - Here we describe how much time has each of our group member spent on each part of the project, Victor focusing on Backend, Database and API, 
+            Parniya focusing full time to Frontend, and Mohammed focusing on Backend, Frontend and Deployment:<br>
+            - Victor Alzorriz worked on backend (40% of the time), database design and setup (30% of the time) and OpenAPI Spec (30% of the time).<br>
+            - Parniya Saeedzadeh worked on <br>
+            - Mohammed Nizam worked on 
         </p>
         <br>
         <h3>
             Analysis of existing API
         </h3>
         <p>
-            Describe here the research of (full or part of) existing APIs that are similar in objectives and scope to the 
+            <strong>Describe here the research of (full or part of) existing APIs that are similar in objectives and scope to the 
             one implemented, that have possibly guided implementation choices (these should not be necessarily OpenAPI 
             implementations). Toy APIs (such as the Swagger's Pet Store) or the example shown during lectures are not a 
-            valid response.
+            valid response.</strong>
         </p>
         <br>
         <h3>
             Learning outcome
         </h3>
         <p>
-            What was the most important thing all the members have learned while developing this part of the project, 
-            what questions remained unanswered, how you will use what you've learned in your everyday life?<br>
-            Examples:<br>
-            - Foo learned to write SQL queries and Javascript but wanted to know more about caching, he's probably going 
-            to create his own startup with what she has learned
-            - Bar learned how to deploy on a cloud platform, he would have liked to know more about promises for asynchronous code..
+            <strong>What was the most important thing all the members have learned while developing this part of the project, what questions remained unanswered,
+            how you will use what you've learned in your everyday life?</strong>
+            <br>
+            - Thanks to this project all the group has gain a lot of knowledge about web servers and web developing. 
+            Some of the thing that the group has learned are:<br>
+            - Victor improve his Javascript and SQL code writting, and learned how to use and design APIs. 
+            He also learned a lot about how web servers send and recibe data, and how they work in the background. <br>
+            - Parniya <br>
+            - Mohammed
         </p>
     </body>
 </html>
