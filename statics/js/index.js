@@ -67,7 +67,7 @@ function fetchEvents(ApiUrl) {
             console.log('ajax success');
             var s = drawEvents(data);
             
-            $('#LatestEvents').html(s);
+            $('#owl-carousel').html(s);
         },
         error: ()=>{
             notifyerror("error");
