@@ -8,9 +8,15 @@ $(document).ready(() => {
     const selectedMonthID = urlParams.get('EventId');
     console.log(selectedMonthID);
     if(selectedMonthID == -1)
-    fetchEvents('https://hyp-project.herokuapp.com/api/events/month');
+    {
+	    fetchEvents('https://hyp-project.herokuapp.com/api/events/month');
+	    document.getElementById("eventSelector").innerHTML =  "Current Month Events";
+    }
+    
     else if (selectedMonthID == 0){
+	     document.getElementById("eventSelector").innerHTML =  "Latest Events";
         fetchEvents('https://hyp-project.herokuapp.com/api/events?limit=3&order=event_date');
+	    
     } 
     else if (selectedMonthID > 0){
         fetchEvents('https://hyp-project.herokuapp.com/api/events?month='+parseInt(selectedMonthID));
@@ -47,7 +53,7 @@ function drawEvents(data) {
          
 // /eventDetailes.html?eventID='+data[i].id_activity+'
 	if(data.length==0){
-		s ='<div class="tt-no-result">No results found.</div>';
+		s ='<div class="tt-no-result ml-5 mt-5">No results found.</div>';
 	}
 		
 	  
