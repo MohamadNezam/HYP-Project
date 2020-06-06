@@ -35,7 +35,16 @@ function drawEvents(data) {
 		s ='<div class="tt-no-result ml-5 mt-5">No results found.</div>';
 	}
 		
-	  
+	 s = s +'<div class="col-lg-12">' 
+                  +'<div class="slider_in ">'  
+                 +'<br><br><br>'     
+                  +' <h3>LATEST EVENTS</h3>'     
+                 +'<div id="owl-carousel" class="owl-carousel owl-theme">'     ;  
+                            
+                
+
+
+                
   for (var i = 0; i < data.length; i++) {
         //data.length
         
@@ -47,9 +56,11 @@ function drawEvents(data) {
                +'</div>'
                +'<img class="mt-3 img-fluid" src="'+data[i].image+'" alt="'+data[i].image+'">'
                +'</div>'
-               +'</div>'
+               +'</div>';
 
     }
+	
+	  s = s +' /div></div></div>'     ;
      
     return s;
 }
