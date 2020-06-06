@@ -77,7 +77,7 @@ function fetchEvents(ApiUrl) {
         success: (data) => {
             console.log('ajax success');
             var s = drawEvents(data);          
-	    $("#owl-carousel").append(s);
+	    $("#latestEventcarousel").append(s);
         },
         error: ()=>{
             notifyerror("error");
