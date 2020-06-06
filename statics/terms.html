@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,7 +28,7 @@
     <a href="#" class="navbar-brand">
         <img src="img/logo.png" height="35" alt="logo">
     </a>
-    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+    <button type="button" aria-label="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -277,61 +277,9 @@
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	   	<script src="js/terms.js"></script>
     
     
-    
-    
-    
-    
- <script>
-	$(document).ready(function(){
-var $animation_elements = $('.anim');
-var $window = $(window);
-
-function check_if_in_view() {
-var window_height = $window.height();
-var window_top_position = $window.scrollTop();
-var window_bottom_position = (window_top_position + window_height);
-
-$.each($animation_elements, function() {
-var $element = $(this);
-var element_height = $element.outerHeight();
-var element_top_position = $element.offset().top;
-var element_bottom_position = (element_top_position + element_height);
-
-//check to see if this current container is within viewport
-if ((element_bottom_position >= window_top_position) &&
-(element_top_position <= window_bottom_position)) {
-$element.addClass('animated');
-} else {
-$element.removeClass('animated');
-}
-});
-}
-
-$window.on('scroll resize', check_if_in_view);
-$window.trigger('scroll');
-});
-/**********************Scroll Animation "END"************************************/
-
-/**********************Change color of center aligned animated content small Circle  "START"************************************/
-$(document).ready(function(){
-    $(" .debits").hover(function(){
-        $(" .center-right").css("background-color", "#4997cd");
-        }, function(){
-        $(" .center-right").css("background-color", "#fff");
-    }); 
-});
-$(document).ready(function(){
-    $(".credits").hover(function(){
-        $(".center-left").css("background-color", "#4997cd");
-        }, function(){
-        $(".center-left").css("background-color", "#fff");
-    }); 
-});
-	 
-
- </script>
 
   
 		

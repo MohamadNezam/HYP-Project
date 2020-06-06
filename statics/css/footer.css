@@ -3,10 +3,12 @@
 }
 .breadcrumb{
 	background-color: #ffffff;
+	 
 }
 
-#breadcrumbc{
-	background-color: #FFF;
+ol.breadcrumb li a {
+  color: #181818;
+  text-decoration: none;
 }
 
 * {

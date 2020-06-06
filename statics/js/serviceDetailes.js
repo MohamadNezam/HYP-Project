@@ -30,7 +30,8 @@ function drawServiceDetailes(data) {
 	   console.log(err.message); 
 	}
 	try {   document.getElementById("servicetitle").innerHTML = data[0].title;
-   
+	     document.getElementById("servicetitle2").innerHTML = data[0].title;
+ 
 	}
 	catch(err) {
 	   console.log(err.message); 
