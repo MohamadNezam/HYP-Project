@@ -7,7 +7,7 @@ body{
       background-size: cover;
       }
       .section:nth-child(2){
-      background:url('img/white.jpg');
+      background:url('../img/white.jpg');
       background-size: cover;
       }
       .section:nth-child(3){
