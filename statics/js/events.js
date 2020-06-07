@@ -60,13 +60,14 @@ function drawEvents(data) {
   for (var i = 0; i < data.length; i++) {
         //data.length
         
-         s = s        +'<div class="card col-sm-3  mt-3 ml-2 mb-4 mr-2 shadow-sm sechover">'				
-                      +'<a href="/eventDetailes.html?eventID='+data[i].id_activity+'"> <img class="mt-3 img-fluid" src="'+data[i].image+'" alt="'+data[i].image+'"></a>'
-                      +' <div class="card-body">'
-                      +'  <h5><b>'+data[i].title+'</b></h5>'
-                      +' <h6 class="card-text">'+data[i].description.substring(0,40)+'...'+' <u class="linkcolor"> <a href="/eventDetailes.html?eventID='+data[i].id_activity+'">more</a> </u></h6>'
+         s = s        +'<div class="col-md-4 padding">'
+                      +'<div class="card shadow-sm sechover">'				
+                      +'<a href="/eventDetailes.html?eventID='+data[i].id_activity+'"> <img class="img-fluid padding2" src="'+data[i].image+'" alt="'+data[i].image+'"></a>'
+                      +'<div class="card-body">'
+                      +'<h5><b>'+data[i].title+'</b></h5>'
+                      +'<h6 class="card-text">'+data[i].description.substring(0,40)+'...'+' <u class="linkcolor"> <a href="/eventDetailes.html?eventID='+data[i].id_activity+'">more</a> </u></h6>'
                       +'<div class="d-flex justify-content-between align-items-center">  '
-                      +' <small class="text-muted">'+data[i].event_date+'</small>'
+                      +'<small class="text-muted">'+data[i].event_date+'</small>'
                       +'</div></div>  </div>'
                             
                                  
