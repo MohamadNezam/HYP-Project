@@ -119,8 +119,8 @@ function fetchEvents(ApiUrl) {
       autoScrolling:true,
       scrollHorizontally: true,
       navigation:true,
-      anchors:['Home','About','Contact'],
-      navigationTooltips:['Home','About','Contact'],
+      anchors:['Home','About','Events','Training','Register'],
+      navigationTooltips:['Home','About','Events','Training','Register'],
       });
 	 
       //Jquery auto height
