@@ -1812,7 +1812,7 @@ a:hover{
 	text-align: center;
 }
 
-.btn {padding: 5px 15px 5px 15px; border-radius: 15px 15px 15px 15px; width: 180px;     border-color:#08D3D2;}
+.btn-circle {padding: 5px 15px 5px 15px; border-radius: 15px 15px 15px 15px; width: 180px;     border-color:#08D3D2;}
 
 .txt{
 	clear: both;

@@ -1,107 +1,119 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
-	<title>persons page</title>
-    <link rel="stylesheet" type="text/css" href="css/persons.css">
-	
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+	<title>Persons page</title>
+
+	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-	 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	 <link rel="stylesheet" type="text/css" href="css/footer.css">
+
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link rel="stylesheet" type="text/css" href="css/persons.css">
+
 </head>
 
 <body>
-	 <!--   ================================================== -->
-           <!--   ================== HEADER =========================== -->
-        <header  id="headerContent"> 
-        <nav class="navbar navbar-expand-md  navbar-dark fixed-top" style="background: -webkit-linear-gradient(left, #3AAFA5, #4FAF8B);">
-    <a href="#" class="navbar-brand">
-        <img src="img/logo.png" height="35" alt="logo">
-    </a>
-    <button type="button" aria-label="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-        <div class="navbar-nav">
-            <a href="index.html" class="nav-item nav-link ">HOME</a>
-            <a href="contact.html" class="nav-item nav-link">CONTACTS</a>
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">SERVICES</a>
-                <div class="dropdown-menu">
-                      <a href="/services.html" class="dropdown-item">ALL Services</a>
-                    <a href="/services.html?CategoryId=1" class="dropdown-item">Music Services</a>
-                    <a href="/services.html?CategoryId=2" class="dropdown-item">Sport Services</a>
-                </div>
-            </div>
-             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">EVENTS</a>
-                <div class="dropdown-menu">
-                      <a href="/events.html" class="dropdown-item">ALL Events</a>
-                    <a href="/events.html?EventId=0" class="dropdown-item">Latest Events</a>
-			  <a href="/events.html?EventId=-1" class="dropdown-item">Current Month Events</a>
-                    
-                </div>
-            </div>
-             <a href="/persons.html" class="nav-item nav-link active">PERSONS</a>
-        </div>
-        
-        <div class="navbar-nav">
-            <a href="/terms.html" class="btn btn-outline-light">Register</a>
-        </div>
-    </div>
-</nav>
-</header>
-
-      
-    
-      
-       <!--   ================================================== -->
+	<!--   ================================================== -->
+	<!--   ================== HEADER =========================== -->
 	
-	 <nav aria-label="breadcrumb">
-	   <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+	<header id="headerContent">
+		<nav class="navbar navbar-expand-md  navbar-dark fixed-top"
+			style="background: -webkit-linear-gradient(left, #3AAFA5, #4FAF8B);">
+			
+			<a href="#" class="navbar-brand">
+				<img src="img/logo.png" height="35" alt="logo">
+			</a>
 
-        <li class="breadcrumb-item active" aria-current="page">Persons</li>
-        </ol>
-    </nav>
-	<div class="container section">
-           <h1 class="person-title">Persons</h1>
-            <div class="row">
-            
-                <div class="col-md-6">
-                    <h3>
-                        Highly Skilled Volunteers
-                    </h3>
-                    <p>
-									We have had lots of supporters from 1990 and we are glad to introduce them to you. 
-									they both supported financially and also helped with training people who do not have the chance to learn.
+			<button type="button" aria-label="button" class="navbar-toggler" data-toggle="collapse"
+				data-target="#navbarCollapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-									Finally if you are interested to join to our volunteer association you can read terms and conditions and easily register as a participant and be one of us for free.
-									and if you have any talent in any area and fields or want to support financially  you can register as a volunteer.
+			<div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+				<div class="navbar-nav">
 
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <img src="https://preview.ibb.co/erdq8p/Employee-1.jpg" alt="Employee-1.jpg"/>
-                </div>
-            </div>
-            
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" rel="stylesheet">
-<section class="testimonial-section">
-		<div class="large-container">
-			<div class="sec-title">
-				
-				<h2>OUR MEMBERS FROM PAST UNTIL NOW</h2>
+					<a href="index.html" class="nav-item nav-link ">HOME</a>
+
+					<a href="contact.html" class="nav-item nav-link">CONTACTS</a>
+					
+					<div class="nav-item dropdown">
+						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">SERVICES</a>
+						<div class="dropdown-menu">
+							<a href="/services.html" class="dropdown-item">ALL Services</a>
+							<a href="/services.html?CategoryId=1" class="dropdown-item">Music Services</a>
+							<a href="/services.html?CategoryId=2" class="dropdown-item">Sport Services</a>
+						</div>
+					</div>
+
+					<div class="nav-item dropdown">
+						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">EVENTS</a>
+						<div class="dropdown-menu">
+							<a href="/events.html" class="dropdown-item">ALL Events</a>
+							<a href="/events.html?EventId=0" class="dropdown-item">Latest Events</a>
+							<a href="/events.html?EventId=-1" class="dropdown-item">Current Month Events</a>
+						</div>
+					</div>
+
+					<a href="/persons.html" class="nav-item nav-link active">PERSONS</a>
+
+				</div>
+				<div class="navbar-nav">
+					<a href="/terms.html" class="btn btn-outline-light">Register</a>
+				</div>
 			</div>
+		</nav>
+	</header>
 
-			<div id="testimonial-carousel" class="testimonial-carousel owl-carousel owl-theme">
-			<!-- 	<div class="testimonial-block">
+	<!--   ================================================== -->
+
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Persons</li>
+		</ol>
+	</nav>
+
+	<div class="container section">
+		<h1 class="person-title">Persons</h1>
+		
+		<div class="row">
+			<div class="col-md-6">
+				<h3>
+					Highly Skilled Volunteers
+				</h3>
+				<p>
+					We have had lots of supporters from 1990 and we are glad to introduce them to you.
+					they both supported financially and also helped with training people who do not have the chance to learn.
+
+					Finally if you are interested to join to our volunteer association you can read terms and conditions and
+					easily register as a participant and be one of us for free.
+					and if you have any talent in any area and fields or want to support financially you can register as a
+					volunteer.
+				</p>
+			</div>
+			<div class="col-md-6">
+				<img src="https://preview.ibb.co/erdq8p/Employee-1.jpg" alt="Employee-1.jpg" />
+			</div>
+		</div>
+
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" rel="stylesheet">
+		
+		<section class="testimonial-section">
+			<div class="large-container">
+				<div class="sec-title">
+					<h2>OUR MEMBERS FROM PAST UNTIL NOW</h2>
+				</div>
+				<div id="testimonial-carousel" class="testimonial-carousel owl-carousel owl-theme">
+					<!-- 	<div class="testimonial-block">
 					<div class="inner-box">
 						<div class="text">test</div>
 						<div class="info-box">
@@ -133,127 +145,96 @@
 						</div>
 					</div>
 				</div>  -->
-			</div>
-		</div>
-	</section>
-	
-        
-        <section>
-   <div class="container">
-      
-        <div class="row">
-             
-              <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                  <div class="card cardshadow">
-                    
-                    <div class="card-body">
-                      <h5 class="card-title cardtopic">Participant</h5>
-                      <br>
-                      <hr>
-                      <p class="card-text">If you are interested in participating the VOLUNTEERARO classes like music and sport classes click the link below and read the terms and conditions.  </p>
-                      <br>
-                      <hr>
-                      <a href="/terms.html" class="gosomewhere"><u>Become a Participant</u></a>
-                     
-                    </div>
-                  </div>
-             </div>
-             <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                  <div class="card cardshadow">
-                    
-                    <div class="card-body">
-                      <h5 class="card-title cardtopic">Volunteer</h5>
-                      <br>
-                      <hr>
-                      <p class="card-text">If you are interested in being a coach and instructor of the classes and you are experienced, please click the link below to read our terms and conditions.  </p>
-                      <br>
-                      <hr>
-                      <a href="/terms.html" class="gosomewhere"><u>Become a Volunteer</u></a>
-                     
-                    </div>
-                  </div>
-             </div>
-        </div>
-   </div>
-</section>
-        </div>
-  
-    
-    
-    
-        	         <!--   ================================================== -->
-         <!--   ============Footer ====================== -->
-      
-      
-       
-<div class="mt-5 footer-distributed">
-
-			<div class="footer-left">
-
-			 <img src="img/logo.png" height="50" alt="logo">
-
-				<p class="footer-links">
-					<a href="/index.html" class="link-1">Home</a>
-					
-					<a href="/contact.html">About Us</a>
-
-				
-					<a href="/terms.html">Terms & conditon</a>
-				
-				</p>
-
-				<p class="footer-company-name">Volunterraro © 2020</p>
-			</div>
-
-			<div class="footer-center">
-
-				<div>
-					<i class="fa fa-map-marker"></i>
-					<p><span>Piazza Leonardo da Vinci , 32</span>20133 Milano MI</p>
 				</div>
- 
-				<div>
-					<i class="fa fa-phone"></i>
-					<p>+39 351 646 6699</p>
-				</div>
-
-				<div>
-					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:support@company.com" style="color:#FFFFFF;">support@volunterraro.com</a></p>
-				</div>
-
 			</div>
+		</section>
 
-			<div class="footer-right">
+		<section>
+			<div class="container">
+				<div class="row">
 
-				<p class="footer-company-about">
-					<span>Follow Us </span>
-                   
-								</p>
+					<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+						<div class="card cardshadow">
+							<div class="card-body">
+								<h5 class="card-title cardtopic">Participant</h5>
+								<br>
+								<hr>
+								<p class="card-text">If you are interested in participating the VOLUNTEERARO classes like music and
+									sport classes click the link below and read the terms and conditions. </p>
+								<br>
+								<hr>
+								<a href="/terms.html" class="gosomewhere"><u>Become a Participant</u></a>
+							</div>
+						</div>
+					</div>
 
-
-
-				<div class="footer-icons">
- 
-					<a href="https://www.facebook.com" aria-label="first link" ><i class="fa fa-facebook"></i></a>
-					<a href="https://www.twitter.com" aria-label="first2 link" ><i class="fa fa-twitter"></i></a>
-					<a href="https://www.linkedin.com" aria-label="first3 link" ><i class="fa fa-linkedin"></i></a>
-					<a href="https://www.github.com" aria-label="first4 link" ><i class="fa fa-github"></i></a>
-
+					<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+						<div class="card cardshadow">
+							<div class="card-body">
+								<h5 class="card-title cardtopic">Volunteer</h5>
+								<br>
+								<hr>
+								<p class="card-text">If you are interested in being a coach and instructor of the classes and you are
+									experienced, please click the link below to read our terms and conditions. </p>
+								<br>
+								<hr>
+								<a href="/terms.html" class="gosomewhere"><u>Become a Volunteer</u></a>
+							</div>
+						</div>
+					</div>
 				</div>
-
 			</div>
+		</section>
+	</div>
 
+	<!--   ================================================== -->
+	<!--   ============Footer ====================== -->
+
+	<div class="mt-5 footer-distributed">
+
+		<div class="footer-left">
+			<img src="img/logo.png" height="50" alt="logo">
+			<p class="footer-links">
+				<a href="/index.html" class="link-1">Home</a>
+				<a href="/contact.html">About Us</a>
+				<a href="/terms.html">Terms & conditon</a>
+			</p>
+			<p class="footer-company-name">Volunterraro © 2020</p>
 		</div>
 
- 
-      
-      
-       <!--   ================================================== -->
-       <!--   ================================================== -->
-    
-     
-       <script src="js/persones.js"></script>
-       
+		<div class="footer-center">
+			<div>
+				<i class="fa fa-map-marker"></i>
+				<p><span>Piazza Leonardo da Vinci , 32</span>20133 Milano MI</p>
+			</div>
+			<div>
+				<i class="fa fa-phone"></i>
+				<p>+39 351 646 6699</p>
+			</div>
+			<div>
+				<i class="fa fa-envelope"></i>
+				<p><a href="mailto:support@company.com" style="color:#FFFFFF;">support@volunterraro.com</a></p>
+			</div>
+		</div>
+
+		<div class="footer-right">
+			<p class="footer-company-about">
+				<span>Follow Us </span>
+			</p>
+			<div class="footer-icons">
+				<a href="https://www.facebook.com" aria-label="first link"><i class="fa fa-facebook"></i></a>
+				<a href="https://www.twitter.com" aria-label="first2 link"><i class="fa fa-twitter"></i></a>
+				<a href="https://www.linkedin.com" aria-label="first3 link"><i class="fa fa-linkedin"></i></a>
+				<a href="https://www.github.com" aria-label="first4 link"><i class="fa fa-github"></i></a>
+			</div>
+		</div>
+	</div>
+
+	<!--   ================================================== -->
+	<!--   ================================================== -->
+
+	<script src="js/persones.js"></script>
+
 </body>
+
 </html>
