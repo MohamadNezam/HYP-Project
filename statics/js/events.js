@@ -60,7 +60,7 @@ function drawEvents(data) {
         //data.length
 
         s = s
-            + '<div class="col-md-4 padding">'
+            + '<div class="col-md-4 padding d-flex align-items-stretch">'
             + '<div class="card shadow-sm sechover">'
             + '<a href="/eventDetailes.html?eventID=' + data[i].id_activity + '"> <img class="img-fluid padding2" src="' + data[i].image + '" alt="' + data[i].image + '"></a>'
             + '<div class="card-body">'
