@@ -1,41 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
 body{
-      font-family: 'Lato', sans-serif;
-      }
-      .section:nth-child(1){
-      background:url('https://trickettsinsurance.co.uk/wp-content/uploads/2015/10/charity-and-community-insurance-e1485342879752.jpg');
-      background-size: cover;
-      }
-      .section:nth-child(2){
-      background:url('../img/white.jpg');
-      background-size: cover;
-      }
-      .section:nth-child(3){
-      background:url('https://w3hubs.com/Modern-Landing-Page-Using-Page.js/3.jpg');
-      background-size: cover;
-      }
-	  .section:nth-child(4){
-      background:url('https://w3hubs.com/Modern-Landing-Page-Using-Page.js/3.jpg');
-      background-size: cover;
-      }
+  font-family: 'Lato', sans-serif;
+}
+.section:nth-child(1){
+  background:url('https://trickettsinsurance.co.uk/wp-content/uploads/2015/10/charity-and-community-insurance-e1485342879752.jpg');
+  background-size: cover;
+}
+.section:nth-child(2){
+  background:url('../img/white.jpg');
+  background-size: cover;
+}
+.section:nth-child(3){
+	background:url('https://w3hubs.com/Modern-Landing-Page-Using-Page.js/3.jpg');
+  background-size: cover;
+}
+.section:nth-child(4){
+  background:url('https://w3hubs.com/Modern-Landing-Page-Using-Page.js/3.jpg');
+  background-size: cover;
+}
 
-	  .section:nth-child(5){
-      background:url('https://onlyvectorbackgrounds.com/wp-content/uploads/2018/09/Abstract-Ambient-Light-Background-Grey.jpg');
-      background-size: cover;
-      }
-	  
-      h1{
-      text-align: center;
-      color: #fff;
-      font-size: 70px;
-      }
-      span{
-      background-color: #fff !important;
-      }
-	  h3{
-	  text-align: center;
-	  color: white;
-	  }
+.section:nth-child(5){
+  background:url('https://onlyvectorbackgrounds.com/wp-content/uploads/2018/09/Abstract-Ambient-Light-Background-Grey.jpg');
+  background-size: cover;
+}
+
+h1{
+  text-align: center;
+  color: #fff;
+  font-size: 70px;
+}
+span{
+  background-color: #fff !important;
+}
+h3{
+	text-align: center;
+	color: white;
+}
 .sec1{
 	padding-top: 160px;
 }

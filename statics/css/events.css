@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+body {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
+}
