@@ -48,14 +48,14 @@ function drawServices(data) {
 
   for (var i = 0; i < data.length; i++) {
         //data.length
-             s = s    +'<div class="col-md-4">'
-                      +'<div class="card  mb-4 shadow-sm sechover">'				
-                      +'<a href="/serviceDetailes.html?serviceID='+data[i].id_activity+'"> <img class="img-fluid" src="'+data[i].image+'" alt="'+data[i].image+'"></a>'
-                      +' <div class="card-body">'
-                      +'  <h5><b>'+data[i].title+'</b></h5>'
-                      +' <h6 class="card-text">'+data[i].description.substring(0,40)+'...'+' <u class="linkcolor"> <a href="/serviceDetailes.html?serviceID='+data[i].id_activity+'">more</a> </u></h6>'
+             s = s    +'<div class="col-md-4 padding d-flex align-items-stretch">'
+                      +'<div class="card shadow-sm sechover">'				
+                      +'<a href="/serviceDetailes.html?serviceID='+data[i].id_activity+'"> <img class="img-fluid padding2" src="'+data[i].image+'" alt="'+data[i].image+'"></a>'
+                      +'<div class="card-body">'
+                      +'<h5><b>'+data[i].title+'</b></h5>'
+                      +'<h6 class="card-text">'+data[i].description.substring(0,40)+'...'+' <u class="linkcolor"> <a href="/serviceDetailes.html?serviceID='+data[i].id_activity+'">more</a> </u></h6>'
                       +'<div class="d-flex justify-content-between align-items-center">  '
-                      +' <small class="text-muted">'+data[i].service_day+'</small>'
+                      +'<small class="text-muted">'+data[i].service_day+'</small>'
                       +'</div></div></div></div>'
                             
                                  
