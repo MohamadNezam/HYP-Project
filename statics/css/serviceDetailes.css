@@ -5,7 +5,7 @@
 body {
     font-family: 'Lato', sans-serif;
     text-align: center;
-  }
+}
 .thankyou-page ._header {
     background: #fee028;
     padding: 100px 30px;
@@ -64,6 +64,7 @@ body {
 .how-section1{
     margin-top:-8%;
     padding: 10%;
+    padding-bottom: 0%;
 }
 .how-section1 h4{
     color: #AFCA0Bfh4;
@@ -98,9 +99,6 @@ body {
 
 .text-align-left {
     text-align: left;
-}
-.text-align-right {
-    text-align: right;
 }
 .margin {
     padding: 5%;
