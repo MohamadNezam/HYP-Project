@@ -103,3 +103,8 @@ body {
 .margin {
     padding: 5%;
 }
+
+.header-image {
+	background-size: cover;
+	background-position: center;
+}

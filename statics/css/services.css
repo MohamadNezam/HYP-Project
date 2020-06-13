@@ -37,3 +37,8 @@ body {
 	padding-right: 5%;
 	background-position: center top;
 }
+
+.header-image {
+	background-size: cover;
+	background-position: center;
+}
