@@ -10,24 +10,29 @@ body{
 }
 .section:nth-child(1){
   background:url('https://trickettsinsurance.co.uk/wp-content/uploads/2015/10/charity-and-community-insurance-e1485342879752.jpg');
-  background-size: cover;
+	background-size: cover;
+	background-position: center;
 }
 .section:nth-child(2){
   background:url('../img/white.jpg');
-  background-size: cover;
+	background-size: cover;
+	background-position: center;
 }
 .section:nth-child(3){
 	background:url('https://w3hubs.com/Modern-Landing-Page-Using-Page.js/3.jpg');
-  background-size: cover;
+	background-size: cover;
+	background-position: center;
 }
 .section:nth-child(4){
   background:url('https://w3hubs.com/Modern-Landing-Page-Using-Page.js/3.jpg');
-  background-size: cover;
+	background-size: cover;
+	background-position: center;
 }
 
 .section:nth-child(5){
   background:url('https://onlyvectorbackgrounds.com/wp-content/uploads/2018/09/Abstract-Ambient-Light-Background-Grey.jpg');
-  background-size: cover;
+	background-size: cover;
+	background-position: center;
 }
 
 h1{
