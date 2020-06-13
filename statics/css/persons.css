@@ -65,9 +65,7 @@ body {
 }
 
 .testimonial-section:before{
-	position: absolute;
-	left: -200px;
-	top: 22%;
+	position: relative;
 	background-image: url(http://t.commonsupport.com/adro/images/icons/ring-circle.png);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -102,7 +100,7 @@ body {
 }
 
 .testimonial-block .inner-box{
-	padding: 80px 105px;
+	padding: 80px 10px;
 	background-color:#ffffff;
 	box-shadow: 0 0 50px rgba(226,222,232,0.75);
 }
@@ -120,7 +118,7 @@ body {
 
 .testimonial-block .info-box{
 	position: relative;
-	padding-left: 115px;
+	padding-left: 20px;
 	padding-top: 10px;
 }
 
