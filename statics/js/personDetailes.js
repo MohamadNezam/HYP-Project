@@ -8,7 +8,7 @@ $(document).ready(() => {
     console.log(personID);
     if(personID != null)
     {
-        var temp='https://cors-anywhere.herokuapp.com/';
+        var temp='';
         var url= temp+'http://hyp-project.herokuapp.com/api/volunteers/'+personID;
         var urlevents= temp+'http://hyp-project.herokuapp.com/api/volunteers/'+personID+'/events';
         var urlservices= temp+'http://hyp-project.herokuapp.com/api/volunteers/'+personID+'/services';
