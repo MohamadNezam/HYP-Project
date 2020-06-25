@@ -9,9 +9,9 @@ $(document).ready(() => {
     if(personID != null)
     {
         var temp='';
-        var url= temp+'http://hyp-project.herokuapp.com/api/volunteers/'+personID;
-        var urlevents= temp+'http://hyp-project.herokuapp.com/api/volunteers/'+personID+'/events';
-        var urlservices= temp+'http://hyp-project.herokuapp.com/api/volunteers/'+personID+'/services';
+        var url= temp+'https://hyp-project.herokuapp.com/api/volunteers/'+personID;
+        var urlevents= temp+'https://hyp-project.herokuapp.com/api/volunteers/'+personID+'/events';
+        var urlservices= temp+'https://hyp-project.herokuapp.com/api/volunteers/'+personID+'/services';
 
 
         fetch(url,1);
