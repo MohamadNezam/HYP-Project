@@ -7,7 +7,10 @@ $(document).ready(() => {
     const serviceID = urlParams.get('serviceID');
     console.log(serviceID);
     if(serviceID != null)
-    fetchServices(serviceID);
+    {
+             fetchServices(serviceID);
+             fetch2(serviceID); 
+    }
 });
 
                    
@@ -103,5 +106,39 @@ function fetchServices(serviceId) {
  
 
 
-  
+function drawEventDetailes2(data) {
+ var s='';
+        s = s + '<ul class="list-group">';
+            for (var i = 0; i < data.length; i++) {
+                
+              s = s            
+                +'<a href="/personDetailes.html?ID='+data[i].id_person+'"><li class="list-group-item "> '+data[i].name+' '+data[i].surename+ '</li> </a>'
+            }
+            
+            if(data.length==0)
+                {
+                    s = s + '<li class="list-group-item">No Person  Assign Yet to Manage this event </li>' 
+                }
+     
+             s = s + '</ul>';
+             $('#persons').html(s);
+}
  
+function fetch2(serviceId) {
+    jQuery.ajax({
+        url: 'https://hyp-project.herokuapp.com/api/services/'+serviceId+'/volunteers/' ,
+        type: 'GET',
+        dataType: 'json',
+        Origin: "https://hyp-project.herokuapp.com",
+        success: (data) => {
+            console.log('ajax success');
+              
+             drawEventDetailes2(data);
+             
+        },
+        error: ()=>{
+            notifyerror("error");
+        }
+    });
+}
+
