@@ -55,7 +55,7 @@ function drawServices(data) {
                       +'<h5><b>'+data[i].title+'</b></h5>'
                       +'<h6 class="card-text">'+data[i].description.substring(0,40)+'...'+' <u class="linkcolor"> <a href="/serviceDetailes.html?serviceID='+data[i].id_activity+'">more</a> </u></h6>'
                       +'<div class="d-flex justify-content-between align-items-center">  '
-                      +'<small class="text-muted">'+data[i].service_day+'</small>'
+                      +'<small class="text-muted">Service day: '+data[i].service_day+'</small>'
                       +'</div></div></div></div>'
                             
                                  
