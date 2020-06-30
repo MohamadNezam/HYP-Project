@@ -125,3 +125,7 @@ body {
 .padding2 {
     padding: 3px;
 }
+
+.main-image{
+    max-height: 800px;
+}
