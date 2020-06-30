@@ -113,3 +113,15 @@ body {
   width: 50%;
   text-align:center
 }
+
+.center2 {
+    text-align:center
+}
+
+.padding {
+    padding: 23px;
+}
+  
+.padding2 {
+    padding: 3px;
+}

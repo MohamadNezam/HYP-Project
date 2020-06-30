@@ -59,8 +59,16 @@ function drawEventDetailes2(data) {
         s = s + '<ul class="list-group">';
             for (var i = 0; i < data.length; i++) {
                 
-              s = s            
-                +'<a href="/personDetailes.html?ID='+data[i].id_person+'"><li class="list-group-item "> '+data[i].name+' '+data[i].surename+ '</li> </a>'
+                s = s
+                + '<div class="col-md-4 padding d-flex align-items-stretch">'
+                + '<div class="card shadow-sm sechover">'
+                + '<a href="/personDetailes.html?ID=' + data[i].id_person + '"> <img class="img-fluid padding2" src="' + data[i].photo + '" alt="' + data[i].name + '"></a>'
+                + '<div class="card-body">'
+                + '<h5><b>' + data[i].name + '</b></h5>'
+                + '<h6 class="card-text">' + data[i].description.substring(0, 40) + '...' + ' <u class="linkcolor"> <a href="/personDetailes.html?ID=' + data[i].id_person + '">more</a> </u></h6>'
+                + '<div class="d-flex justify-content-between align-items-center">  '
+                + '<small class="text-muted">Volunteering since: ' + data[i].volunteer_time + '</small>'
+                + '</div></div></div></div>'
             }
             
             if(data.length==0)
