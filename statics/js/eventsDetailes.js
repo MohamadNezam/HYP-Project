@@ -26,7 +26,8 @@ function drawEventDetailes(data) {
     document.getElementById("eventstart_time").innerHTML = data[0].start_time;
     document.getElementById("eventend_time").innerHTML = data[0].end_time;
     document.getElementById("eventName").innerHTML = data[0].title;
-    document.getElementById("eventimage").src = data[0].image;
+    //document.getElementById("eventimage").src = data[0].image;
+    document.getElementById("eventimage").style.backgroundImage = "url(" + data[0].image + ") ";
     // $('#eventimage').css("background-image", "url(" + data[0].image + ")");
     $('#iFramelocation').attr('src', data[0].location);
 }
