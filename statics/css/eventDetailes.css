@@ -118,6 +118,10 @@ body {
     text-align:center
 }
 
+.padding0 {
+    padding: 0px;
+}
+
 .padding {
     padding: 23px;
 }
