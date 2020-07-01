@@ -388,6 +388,32 @@ paths:
         "404":
           description: "Volunteers not found"
       x-swagger-router-controller: "Event"
+  /events/{eventId}/services:
+    get:
+      tags:
+      - "Event"
+      summary: "Services realted with the event with ID"
+      description: "Returns a list of services"
+      operationId: "eventsEventIdServicesGET"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "eventId"
+        in: "path"
+        description: "ID of event to return"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        "200":
+          description: "A collection of services"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Service"
+        "404":
+          description: "Services not found"
+      x-swagger-router-controller: "Event" 
   /services:
     get:
       tags:
@@ -457,9 +483,6 @@ paths:
         "404":
           description: "Service not found"
       x-swagger-router-controller: "Service"
-      
-    
-      
   /services/{serviceId}/volunteers:
     get:
       tags:
@@ -485,6 +508,32 @@ paths:
               $ref: "#/definitions/Volunteer"
         "404":
           description: "Volunteers not found"
+      x-swagger-router-controller: "Service"
+  /services/{serviceId}/events:
+    get:
+      tags:
+      - "Service"
+      summary: "Events realted to the service with ID"
+      description: "Returns a list of events"
+      operationId: "servicesServiceIdEventsGET"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "serviceId"
+        in: "path"
+        description: "ID of service to return"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        "200":
+          description: "A collection of events"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Event"
+        "404":
+          description: "Events not found"
       x-swagger-router-controller: "Service"
   /categories:
     get:
