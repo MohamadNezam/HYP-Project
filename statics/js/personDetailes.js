@@ -42,7 +42,6 @@ function drawPersons(data, divId) {
             document.getElementById("personNameOnly").innerHTML = data[0].name;
             document.getElementById("personDate").innerHTML = data[0].volunteer_time;
             document.getElementById("personMail").innerHTML = data[0].email;
-            document
 
             personName
         }
@@ -50,7 +49,7 @@ function drawPersons(data, divId) {
             console.log(err.message);
         }
 
-        s = s + '<p>' + data[0].description + '</p>';
+        s = s + data[0].description;
 
         return s;
     }
