@@ -132,3 +132,29 @@ exports.eventsEventIdVolunteersGET = function(eventId) {
   });
 };
 
+
+/**
+ * Services realted with the event with ID
+ * Returns a list of services
+ *
+ * eventId Long ID of event to return
+ * returns List
+ **/
+exports.eventsEventIdServicesGET = function(eventId) {
+  var query = sqlDb('activities');
+  var query = query.join('services', 'activities.id_activity', 'services.id_activity');
+  var query = query.join('events', 'services.id_activity', 'events.id_service');
+  var query = query.select(
+    'activities.id_activity', 'activities.location', 'activities.title', 'activities.description', 
+    'activities.start_time', 'activities.end_time', 'activities.image', 'services.service_day', 'services.capacity', 
+    'services.age', 'services.id_category');
+  var query = query.where('events.id_activity', eventId);
+
+  return query.then(data => {
+    return data.map( e => {
+      console.log(e);
+      return e;
+    });
+  });
+};
+

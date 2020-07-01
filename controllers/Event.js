@@ -25,6 +25,17 @@ module.exports.eventsEventIdVolunteersGET = function eventsEventIdVolunteersGET 
     });
 };
 
+module.exports.eventsEventIdServicesGET = function eventsEventIdServicesGET (req, res, next) {
+  var eventId = req.swagger.params['eventId'].value;
+  Event.eventsEventIdServicesGET(eventId)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.eventsGET = function eventsGET (req, res, next) {
   var limit = req.swagger.params['limit'].value;
   var offset = req.swagger.params['offset'].value;

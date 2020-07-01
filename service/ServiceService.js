@@ -98,3 +98,28 @@ exports.servicesServiceIdVolunteersGET = function(serviceId) {
   });
 };
 
+
+/**
+ * Events realted to the service with ID
+ * Returns a list of events
+ *
+ * serviceId Long ID of service to return
+ * returns List
+ **/
+exports.servicesServiceIdEventsGET = function(serviceId) {
+  var query = sqlDb('activities');
+  var query = query.join('events', 'activities.id_activity', 'events.id_activity');
+  var query = query.select(
+    'activities.id_activity', 'activities.location', 'activities.title', 'activities.description', 
+    'activities.start_time', 'activities.end_time', 'activities.image', 'events.event_date', 'events.id_manager', 
+    'events.id_service');
+  var query = query.where('events.id_service', serviceId);
+
+  return query.then(data => {
+    return data.map( e => {
+      console.log(e);
+      return e;
+    });
+  });
+};
+

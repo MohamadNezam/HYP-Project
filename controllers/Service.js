@@ -39,3 +39,14 @@ module.exports.servicesServiceIdVolunteersGET = function servicesServiceIdVolunt
       utils.writeJson(res, response);
     });
 };
+
+module.exports.servicesServiceIdEventsGET = function servicesServiceIdEventsGET (req, res, next) {
+  var serviceId = req.swagger.params['serviceId'].value;
+  Service.servicesServiceIdEventsGET(serviceId)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
