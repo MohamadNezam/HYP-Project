@@ -83,7 +83,7 @@ exports.volunteersVolunteerIdEventsGET = function(volunteerId,limit,offset) {
   var query = query.join('volunteers_events', 'events.id_activity', 'volunteers_events.id_event');
   var query = query.select(
     'activities.id_activity', 'activities.location', 'activities.title', 'activities.description', 
-    'activities.start_time', 'activities.end_time', 'events.event_date', 'events.id_manager', 
+    'activities.start_time', 'activities.end_time', 'activities.image', 'events.event_date', 'events.id_manager', 
     'events.id_service');
   var query = query.where('volunteers_events.id_volunteer', volunteerId);
 
@@ -114,7 +114,7 @@ exports.volunteersVolunteerIdServicesGET = function(volunteerId,limit,offset) {
   var query = query.join('volunteers_services', 'services.id_activity', 'volunteers_services.id_service');
   var query = query.select(
     'activities.id_activity', 'activities.location', 'activities.title', 'activities.description', 
-    'activities.start_time', 'activities.end_time', 'services.service_day', 'services.capacity', 
+    'activities.start_time', 'activities.end_time', 'activities.image', 'services.service_day', 'services.capacity', 
     'services.age', 'services.id_category');
   var query = query.where('volunteers_services.id_volunteer', volunteerId);
 
