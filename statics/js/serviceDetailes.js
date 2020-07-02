@@ -9,6 +9,9 @@ $(document).ready(() => {
     if (serviceID != null) {
         fetchServices(serviceID);
         fetch2(serviceID);
+        
+        var urlevents='https://hyp-project.herokuapp.com/api/services/'+serviceID+'/events';
+        fetchServices(fetchEvents);
     }
 });
 
@@ -150,5 +153,61 @@ function fetch2(serviceId) {
             notifyerror("error");
         }
     });
+}
+
+
+
+
+function fetchEvents(ApiUrl) {
+    jQuery.ajax({
+        url: ApiUrl,
+        type: 'GET',
+        dataType: 'json',
+        Origin: "https://hyp-project.herokuapp.com",
+        success: (data) => {
+            console.log('ajax success');
+            var s = drawEvents(data);
+
+            $('#events').html(s);
+        },
+        error: () => {
+            notifyerror("error");
+        }
+    });
+}
+
+function drawEvents(data) {
+    var date = '';
+    var dateData = '';
+    var time = '';
+    var s = '';
+    var shortDescription = 'hh';
+    var backgroung = 'bg-light';
+   
+    // /eventDetailes.html?eventID='+data[i].id_activity+'
+    if (data.length == 0) {
+        s = '<div class="tt-no-result ml-5 mt-5">No results found.</div>';
+    }
+
+
+    for (var i = 0; i < data.length; i++) {
+        //data.length
+
+        s = s
+            + '<div class="col-md-4 padding d-flex align-items-stretch">'
+            + '<div class="card shadow-sm sechover">'
+            + '<a href="/eventDetailes.html?eventID=' + data[i].id_activity + '"> <img class="img-fluid padding2" src="' + data[i].image + '" alt="' + data[i].image + '"></a>'
+            + '<div class="card-body">'
+            + '<h5><b>' + data[i].title + '</b></h5>'
+            + '<h6 class="card-text">' + data[i].description.substring(0, 40) + '...' + ' <u class="linkcolor"> <a href="/eventDetailes.html?eventID=' + data[i].id_activity + '">more</a> </u></h6>'
+            + '<div class="d-flex justify-content-between align-items-center">  '
+            + '<small class="text-muted">Event date: ' + data[i].event_date + '</small>'
+            + '</div></div></div></div>'
+
+
+
+    }
+
+    return s;
 }
 
