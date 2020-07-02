@@ -10,6 +10,10 @@ $(document).ready(() => {
     if (eventID != null) {
         fetch(parseInt(eventID));
         fetch2(parseInt(eventID));
+        var urlservices='https://hyp-project.herokuapp.com/api/events/'+eventID+'/services';
+        fetchServices(urlservices);
+        
+        
     }
 
 });
@@ -101,6 +105,50 @@ function fetch2(eventId) {
 
 
 
+
+function fetchServices(ApiUrl) {
+    jQuery.ajax({
+        url: ApiUrl ,
+        type: 'GET',
+        dataType: 'json',
+        Origin: "https://hyp-project.herokuapp.com",
+        success: (data) => {
+            console.log('ajax success');
+            var s = drawServices(data);
+            
+            $('#services').html(s);
+        },
+        error: ()=>{
+            notifyerror("error");
+        }
+    });
+}
+
+ 
+
+function drawServices(data) {
+    
+   var s='';
+         
+
+  for (var i = 0; i < data.length; i++) {
+        //data.length
+             s = s    +'<div class="col-md-4 padding d-flex align-items-stretch">'
+                      +'<div class="card shadow-sm sechover">'				
+                      +'<a href="/serviceDetailes.html?serviceID='+data[i].id_activity+'"> <img class="img-fluid padding2" src="'+data[i].image+'" alt="'+data[i].image+'"></a>'
+                      +'<div class="card-body">'
+                      +'<h5><b>'+data[i].title+'</b></h5>'
+                      +'<h6 class="card-text">'+data[i].description.substring(0,40)+'...'+' <u class="linkcolor"> <a href="/serviceDetailes.html?serviceID='+data[i].id_activity+'">more</a> </u></h6>'
+                      +'<div class="d-flex justify-content-between align-items-center">  '
+                      +'<small class="text-muted">Service day: '+data[i].service_day+'</small>'
+                      +'</div></div></div></div>'
+                            
+                                 
+
+    }
+     
+    return s;
+}
 
 
 
