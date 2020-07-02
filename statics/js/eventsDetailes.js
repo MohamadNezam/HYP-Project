@@ -147,7 +147,7 @@ function drawServices(data) {
 
     }
     
-    if(0<data.length){
+    if(0==data.length){
         s =  '<ul class="list-group"> <li class="list-group-item">No services for this event </li> </ul>'
     }
      
