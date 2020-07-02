@@ -11,7 +11,7 @@ $(document).ready(() => {
         fetch2(serviceID);
         
         var urlevents='https://hyp-project.herokuapp.com/api/services/'+serviceID+'/events';
-        fetchServices(urlevents);
+        fetchEvents(urlevents);
     }
 });
 
@@ -163,7 +163,7 @@ function fetchEvents(ApiUrl) {
         url: ApiUrl,
         type: 'GET',
         dataType: 'json',
-        Origin: ApiUrl,
+        Origin: 'https://hyp-project.herokuapp.com',
         success: (data) => {
             console.log('ajax success');
             var s = drawEvents(data);
