@@ -186,7 +186,8 @@ function drawEvents(data) {
    
     // /eventDetailes.html?eventID='+data[i].id_activity+'
     if (data.length == 0) {
-        s = '<div class="tt-no-result ml-5 mt-5">No results found.</div>';
+        s = '<ul class="list-group"> <li class="list-group-item">No Events for this service </li> </ul>'
+;
     }
 
 
