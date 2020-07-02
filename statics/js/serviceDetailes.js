@@ -163,7 +163,7 @@ function fetchEvents(ApiUrl) {
         url: ApiUrl,
         type: 'GET',
         dataType: 'json',
-        Origin: "https://hyp-project.herokuapp.com",
+        Origin: ApiUrl,
         success: (data) => {
             console.log('ajax success');
             var s = drawEvents(data);
