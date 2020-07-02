@@ -11,7 +11,7 @@ $(document).ready(() => {
         fetch2(serviceID);
         
         var urlevents='https://hyp-project.herokuapp.com/api/services/'+serviceID+'/events';
-        fetchServices(fetchEvents);
+        fetchServices(urlevents);
     }
 });
 
